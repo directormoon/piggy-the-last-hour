@@ -19,7 +19,7 @@
             overflow-x: hidden;
         }
 
-        /* Mini Botão de Créditos */
+        /* Botão de Créditos */
         .credits-btn {
             position: absolute;
             top: 20px;
@@ -96,15 +96,17 @@
 
         .img-fluid { width: 100%; height: 100%; object-fit: cover; }
 
-        .locked-overlay {
+        /* Tag SOON no Index - Brilho Removido */
+        .soon-overlay {
             position: absolute;
-            background: #ff0000;
+            background: #00ccff; 
             color: #fff;
             padding: 5px 20px;
             font-size: clamp(1rem, 4vw, 1.5rem);
             transform: rotate(-5deg);
             border: 2px solid #fff;
             z-index: 5;
+            box-shadow: none; /* Brilho removido aqui */
         }
 
         .menu-grid {
@@ -152,7 +154,7 @@
 <div class="container">
     <div class="event-banner">
         <div class="img-container-16-9">
-            <div class="locked-overlay">LOCKED</div>
+            <div class="soon-overlay">COMING SOON</div>
             <img src="valentine.png" alt="Valentine" class="img-fluid" style="opacity: 0.5;">
         </div>
         <div style="padding: 15px; text-align: center;">
@@ -164,7 +166,7 @@
     <div class="menu-grid">
         <div class="menu-card">
             <h3>CHARACTERS</h3>
-            <p>Explore all available character s.</p>
+            <p>Explore all available characters.</p>
             <a href="characters.html" class="play-btn">VIEW ALL</a>
         </div>
         <div class="menu-card">
