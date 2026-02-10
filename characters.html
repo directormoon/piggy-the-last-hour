@@ -39,7 +39,23 @@
         .page-title { font-size: 1.5rem; color: #e0e0e0; text-shadow: 2px 2px 4px #000; margin: 0; }
         .divider { width: 100%; height: 4px; background: #ff0000; box-shadow: 0 0 15px #ff0000; margin-bottom: 30px; }
         .container { width: 100%; max-width: 900px; margin: 0 auto; padding: 0 15px 40px 15px; }
-        .chapter-section-title { color: #ff0000; font-size: 1.2rem; border-left: 4px solid #ff0000; padding-left: 10px; margin: 40px 0 20px 0; text-transform: uppercase; }
+
+        .chapter-section-title { 
+            color: #ff0000; 
+            font-size: 1.1rem; 
+            text-transform: uppercase; 
+            margin: 40px 0 20px 0; 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+        }
+        .chapter-section-title::after { 
+            content: ""; 
+            flex: 1; 
+            height: 2px; 
+            background: rgba(255, 0, 0, 0.3); 
+        }
+
         .char-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .char-card { background: #151515; border: 2px solid #333; border-radius: 10px; overflow: hidden; transition: 0.3s; }
         .img-container { width: 100%; aspect-ratio: 16 / 9; background: #000; }
@@ -63,7 +79,8 @@
     </header>
     <div class="divider"></div>
     <div class="container">
-        <h2 class="chapter-section-title">Chapter 1: The Farm</h2>
+        
+        <div class="chapter-section-title">Chapter 1: Farm</div>
         <div class="char-grid">
             <div class="char-card">
                 <div class="img-container"><img src="cindy.png" class="char-img"></div>
@@ -82,7 +99,8 @@
                 </div>
             </div>
         </div>
-        <h2 class="chapter-section-title">Chapter 2: The Station</h2>
+
+        <div class="chapter-section-title">Chapter 2: Station</div>
         <div class="char-grid">
             <div class="char-card">
                 <div class="img-container"><img src="bill.png" class="char-img"></div>
@@ -101,7 +119,8 @@
                 </div>
             </div>
         </div>
-        <h2 class="chapter-section-title">Chapter 3: ???</h2>
+
+        <div class="chapter-section-title">Chapter 3: ???</div>
         <div class="char-grid">
             <div class="char-card" style="border-style: dashed; opacity: 0.5;">
                 <div class="img-container"></div>
