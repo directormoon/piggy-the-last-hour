@@ -38,7 +38,16 @@
 
         .page-title { font-size: 1.5rem; color: #e0e0e0; text-shadow: 2px 2px 4px #000; margin: 0; }
         .divider { width: 100%; height: 4px; background: #ff0000; box-shadow: 0 0 15px #ff0000; margin-bottom: 30px; }
-        .container { width: 100%; max-width: 900px; margin: 0 auto; padding: 0 15px 40px 15px; }
+        
+        .container { 
+            width: 100%; 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 0 15px 40px 15px; 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
 
         .chapter-section-title { 
             color: #ff0000; 
@@ -48,6 +57,7 @@
             display: flex; 
             align-items: center; 
             gap: 15px; 
+            grid-column: 1 / -1; 
         }
         .chapter-section-title::after { 
             content: ""; 
@@ -56,11 +66,19 @@
             background: rgba(255, 0, 0, 0.3); 
         }
 
-        .char-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .char-card { background: #151515; border: 2px solid #333; border-radius: 10px; overflow: hidden; transition: 0.3s; }
+        .char-card { 
+            background: #151515; 
+            border: 2px solid #333; 
+            border-radius: 10px; 
+            overflow: hidden; 
+            transition: 0.3s; 
+            display: flex;
+            flex-direction: column;
+        }
+
         .img-container { width: 100%; aspect-ratio: 16 / 9; background: #000; }
         .char-img { width: 100%; height: 100%; object-fit: cover; display: block; }
-        .char-info { padding: 15px; }
+        .char-info { padding: 15px; flex-grow: 1; }
         .char-name { font-size: 1.2rem; margin: 0; color: #fff; }
         .type-tag { display: inline-block; padding: 3px 8px; font-size: 0.65rem; border-radius: 3px; text-transform: uppercase; margin-top: 5px; }
         .survivor { background: #0088ff; color: #fff; }
@@ -81,56 +99,51 @@
     <div class="container">
         
         <div class="chapter-section-title">Chapter 1: Farm</div>
-        <div class="char-grid">
-            <div class="char-card">
-                <div class="img-container"><img src="cindy.png" class="char-img"></div>
-                <div class="char-info">
-                    <h3 class="char-name">Cindy</h3>
-                    <span class="type-tag survivor">Survivor</span>
-                    <p class="char-desc">Cindy, is a very kind and loving cow, she met Clark when she was younger and got engaged they now both own a farm together Cindy's Parents died in a car crash as she was living with her grandparents until 20.</p>
-                </div>
+        <div class="char-card">
+            <div class="img-container"><img src="cindy.png" class="char-img"></div>
+            <div class="char-info">
+                <h3 class="char-name">Cindy</h3>
+                <span class="type-tag survivor">Survivor</span>
+                <p class="char-desc">Cindy, is a very kind and loving cow, she met Clark when she was younger and got engaged.</p>
             </div>
-            <div class="char-card">
-                <div class="img-container"><img src="clark.png" class="char-img"></div>
-                <div class="char-info">
-                    <h3 class="char-name">Clark</h3>
-                    <span class="type-tag infected">Infected</span>
-                    <p class="char-desc">Clark, was a kind loving cow. His parents met their demise at the circus when he was younger, Clark later met & fell inlove with Cindy. they now owned a farm together.</p>
-                </div>
+        </div>
+        <div class="char-card">
+            <div class="img-container"><img src="clark.png" class="char-img"></div>
+            <div class="char-info">
+                <h3 class="char-name">Clark</h3>
+                <span class="type-tag infected">Infected</span>
+                <p class="char-desc">Clark, was a kind loving cow. His parents met their demise at the circus.</p>
             </div>
         </div>
 
         <div class="chapter-section-title">Chapter 2: Station</div>
-        <div class="char-grid">
-            <div class="char-card">
-                <div class="img-container"><img src="bill.png" class="char-img"></div>
-                <div class="char-info">
-                    <h3 class="char-name">Bill</h3>
-                    <span class="type-tag survivor">Survivor</span>
-                    <p class="char-desc">The kind hearted unintelligant boar. Bill got bullied heavily at school when he was younger by others due to being the dumbest and kindest there. Became a police officer to show them he's capable of doing something correct.</p>
-                </div>
+        <div class="char-card">
+            <div class="img-container"><img src="bill.png" class="char-img"></div>
+            <div class="char-info">
+                <h3 class="char-name">Bill</h3>
+                <span class="type-tag survivor">Survivor</span>
+                <p class="char-desc">The kind hearted unintelligant boar. Became a police officer to show them he's capable.</p>
             </div>
-            <div class="char-card">
-                <div class="img-container"><img src="pippin.png" class="char-img"></div>
-                <div class="char-info">
-                    <h3 class="char-name">Pippin</h3>
-                    <span class="type-tag infected">Infected</span>
-                    <p class="char-desc">Pippin devoted is life to the Police while pushing away his loved ones and purposely making himself busy. The station is where he's always wanted to be. His siblings died shortly before Pippin fully became a cop.</p>
-                </div>
+        </div>
+        <div class="char-card">
+            <div class="img-container"><img src="pippin.png" class="char-img"></div>
+            <div class="char-info">
+                <h3 class="char-name">Pippin</h3>
+                <span class="type-tag infected">Infected</span>
+                <p class="char-desc">Pippin devoted is life to the Police while pushing away his loved ones.</p>
             </div>
         </div>
 
         <div class="chapter-section-title">Chapter 3: ???</div>
-        <div class="char-grid">
-            <div class="char-card" style="border-style: dashed; opacity: 0.5;">
-                <div class="img-container"></div>
-                <div class="char-info">
-                    <h3 class="char-name">???</h3>
-                    <span class="type-tag unknown">Classified</span>
-                    <p class="char-desc">Target location not yet identified.</p>
-                </div>
+        <div class="char-card" style="border-style: dashed; opacity: 0.5;">
+            <div class="img-container" style="background: repeating-linear-gradient(45deg, #000, #000 10px, #0a0a0a 10px, #0a0a0a 20px);"></div>
+            <div class="char-info">
+                <h3 class="char-name">???</h3>
+                <span class="type-tag unknown">Classified</span>
+                <p class="char-desc">Target location not yet identified. Files corrupted.</p>
             </div>
         </div>
-    </div>
+
+        </div>
 </body>
 </html>
