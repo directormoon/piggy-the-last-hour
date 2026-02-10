@@ -18,8 +18,9 @@
         .back-btn { 
             display: inline-block; color: #ff0000; text-decoration: none; 
             border: 2px solid #ff0000; padding: 6px 12px; border-radius: 5px; 
-            font-size: 0.7rem; margin-bottom: 20px;
+            font-size: 0.7rem; margin-bottom: 20px; transition: 0.3s;
         }
+        .back-btn:hover { background: #ff0000; color: #fff; }
         .divider { width: 100%; height: 4px; background: #ff0000; box-shadow: 0 0 15px #ff0000; }
         
         .container { max-width: 600px; margin: 40px auto; padding: 20px; }
@@ -29,12 +30,38 @@
             border: 2px solid #333;
             padding: 25px;
             border-radius: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
+        .credit-box:hover { border-color: #ff0000; transform: translateY(-5px); }
         
-        .role { color: #ff0000; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; }
-        .name { font-size: 1.5rem; margin: 10px 0; color: #fff; }
-        .sub-text { font-family: sans-serif; color: #888; font-size: 0.9rem; }
+        /* Estilo das Imagens de Perfil */
+        .avatar-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #ff0000;
+            margin-bottom: 15px;
+            background: #000;
+            object-fit: cover;
+        }
+
+        .role { color: #ff0000; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px; }
+        
+        .credit-link {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 5px 0;
+            transition: 0.3s;
+        }
+        .credit-link:hover { color: #ff0000; }
+        
+        .sub-text { font-family: sans-serif; color: #888; font-size: 0.9rem; margin-top: 5px; }
     </style>
 </head>
 <body>
@@ -46,20 +73,30 @@
 <div class="divider"></div>
 
 <div class="container">
+    
     <div class="credit-box">
+        <img src="https://www.roblox.com/headshot-thumbnail/image?userId=21823494&width=150&height=150&format=png" class="avatar-img" alt="MiniToon">
         <p class="role">Original Game Creator</p>
-        <h2 class="name">MiniToon</h2>
+        <a href="https://www.roblox.com/users/21823494/profile" target="_blank" class="credit-link">MiniToon</a>
         <p class="sub-text">Creator of the original Piggy on Roblox.</p>
     </div>
 
     <div class="credit-box">
+        <img src="https://www.roblox.com/headshot-thumbnail/image?userId=1054362560&width=150&height=150&format=png" class="avatar-img" alt="Mineblocksfusion">
         <p class="role">Fangame Developer</p>
-        <h2 class="name">Rewinded Resurgence by Mineblocksfusion</h2>
+        <a href="https://www.roblox.com/users/1054362560/profile" target="_blank" class="credit-link">Mineblocksfusion</a>
         <p class="sub-text">Developer of Piggy: The Last Hour - Rewinded.</p>
     </div>
 
+    <div class="credit-box">
+        <img src="https://www.roblox.com/group-thumbnail/image?groupId=14969223&width=150&height=150&format=png" class="avatar-img" style="border-radius: 10px;" alt="Group">
+        <p class="role">Development Group</p>
+        <a href="https://www.roblox.com/communities/14969223/Rewinded-Resurgence#!/about" target="_blank" class="credit-link">Rewinded Resurgence</a>
+        <p class="sub-text">Join the community for news and updates.</p>
+    </div>
+
     <p style="font-family: sans-serif; color: #555; font-size: 0.8rem; margin-top: 40px;">
-        This is a fan-made project. All rights to Piggy belong to MiniToon.
+        This is a fan-made project. All rights to Piggy belong to MiniToon.<br>
     </p>
 </div>
 
