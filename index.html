@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piggy: The Last Hour | Home</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://tr.rbxcdn.com/180DAY-77747666510885/768/432/Image/WebP');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            font-family: 'Arial Black', sans-serif;
+            margin: 0; padding: 0; overflow-x: hidden;
+        }
+
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.2) 50%);
+            z-index: 9999;
+            background-size: 100% 3px;
+            pointer-events: none;
+        }
+
+        header { padding: 60px 20px; text-align: center; }
+        h1 { font-size: clamp(2.5rem, 10vw, 5rem); color: #ff0000; text-transform: uppercase; text-shadow: 0 0 20px #ff0000, 5px 5px #000; margin: 0; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+        .img-container-16-9 {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #111;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .img-fluid { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+        /* Event Banner */
+        .event-banner {
+            background: #b02e5c;
+            border: 4px solid #ff69b4;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            overflow: hidden;
+            box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+        }
+
+        .locked-overlay {
+            position: absolute;
+            background: #ff0000;
+            color: #fff;
+            padding: 10px 40px;
+            font-size: 1.5rem;
+            transform: rotate(-5deg);
+            border: 3px solid #fff;
+            box-shadow: 0 0 15px #000;
+            z-index: 10;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .menu-card {
+            background: rgba(20, 20, 20, 0.9);
+            border: 4px solid #333;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .menu-card:hover { border-color: #ff0000; transform: scale(1.02); }
+
+        .card-content { padding: 20px; text-align: center; }
+
+        .play-btn {
+            display: block;
+            background: #ff0000;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px;
+            font-size: 1.2rem;
+            border-bottom: 5px solid #8b0000;
+            margin-top: 15px;
+        }
+
+        .play-btn:active { transform: translateY(3px); border-bottom: 2px solid #8b0000; }
+
+        footer { text-align: center; padding: 40px; color: #444; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <header><h1>THE LAST HOUR</h1></header>
+
+    <div class="container">
+        <div class="event-banner">
+            <div class="img-container-16-9">
+                <div class="locked-overlay">LOCKED</div>
+                <img src="valentine.png" alt="Valentine Event" class="img-fluid" style="opacity: 0.5;">
+            </div>
+            <div style="padding: 20px; text-align: center;">
+                <h2 style="margin: 0; color: #ff69b4; text-shadow: 2px 2px #000;">VALENTINE'S CHAPTER</h2>
+                <p style="font-family: sans-serif; font-size: 0.9rem; margin: 10px 0;">RELEASING FEBRUARY 14TH</p>
+            </div>
+        </div>
+
+        <div class="menu-grid">
+            <div class="menu-card">
+                <div class="img-container-16-9" style="border-bottom: 4px solid #ff0000;">
+                    <img src="skins_banner.png" alt="Skins" class="img-fluid">
+                </div>
+                <div class="card-content">
+                    <h3 style="color: #ff0000; margin: 0;">SKINS</h3>
+                    <a href="skins.html" class="play-btn">OPEN GALLERY</a>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="img-container-16-9" style="border-bottom: 4px solid #ff0000;">
+                    <img src="chapters_banner.png" alt="Chapters" class="img-fluid">
+                </div>
+                <div class="card-content">
+                    <h3 style="color: #ff0000; margin: 0;">CHAPTERS</h3>
+                    <a href="chapters.html" class="play-btn">SELECT MAP</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>PIGGY: THE LAST HOUR // 2026</footer>
+</body>
+</html>
