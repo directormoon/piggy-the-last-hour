@@ -6,129 +6,93 @@
     <title>Chapters | Piggy: The Last Hour</title>
     <style>
         * { box-sizing: border-box; }
-
         body {
             background-color: #0a0a0a;
             background-image: radial-gradient(circle, #2c0000 0%, #050505 100%);
-            color: #fff;
-            font-family: 'Arial Black', sans-serif;
-            margin: 0; padding: 0;
-            overflow-x: hidden;
+            color: #fff; font-family: 'Arial Black', sans-serif; margin: 0; padding: 0; overflow-x: hidden;
         }
-
-        header { 
-            width: 100%; padding: 20px; background: rgba(0, 0, 0, 0.9);
-            display: flex; flex-direction: column; align-items: center; gap: 10px;
-        }
-
-        .back-btn { 
-            color: #ff0000; text-decoration: none; border: 2px solid #ff0000; 
-            padding: 6px 12px; border-radius: 5px; font-size: 0.7rem; align-self: flex-start; 
-        }
-
-        .page-title { 
-            font-size: 1.5rem; color: #e0e0e0; text-shadow: 2px 2px 4px #000; margin: 0; 
-        }
-
-        /* Linha Vermelha Divisória */
-        .divider {
-            width: 100%;
-            height: 4px;
-            background: #ff0000;
-            box-shadow: 0 0 15px #ff0000;
-            margin-bottom: 30px;
-        }
-
-        .container { 
-            width: 100%; max-width: 800px; margin: 0 auto; padding: 0 15px 40px 15px; 
-        }
+        header { width: 100%; padding: 20px; background: rgba(0, 0, 0, 0.9); display: flex; flex-direction: column; align-items: center; gap: 10px; }
+        .back-btn { color: #ff0000; text-decoration: none; border: 2px solid #ff0000; padding: 6px 12px; border-radius: 5px; font-size: 0.7rem; align-self: flex-start; }
+        .page-title { font-size: 1.5rem; color: #e0e0e0; text-shadow: 2px 2px 4px #000; margin: 0; }
+        .divider { width: 100%; height: 4px; background: #ff0000; box-shadow: 0 0 15px #ff0000; margin-bottom: 30px; }
         
-        .chapter-card { 
-            background: #1a1a1a; border: 3px solid #333; margin-bottom: 30px; 
-            border-radius: 10px; overflow: hidden; width: 100%; 
-        }
+        .section-category { color: #ff0000; font-size: 1.1rem; text-transform: uppercase; margin: 40px 0 20px 0; display: flex; align-items: center; gap: 15px; }
+        .section-category::after { content: ""; flex: 1; height: 2px; background: rgba(255, 0, 0, 0.3); }
         
-        .img-container { 
-            width: 100%; aspect-ratio: 16 / 9; background: #000; position: relative; 
-        }
-
-        .chapter-img { 
-            width: 100%; height: 100%; object-fit: cover; display: block; 
-        }
-        
+        .container { width: 100%; max-width: 800px; margin: 0 auto; padding: 0 15px 40px 15px; }
+        .chapter-card { background: #1a1a1a; border: 3px solid #333; margin-bottom: 30px; border-radius: 10px; overflow: hidden; }
+        .img-container { width: 100%; aspect-ratio: 16 / 9; background: #000; position: relative; }
+        .chapter-img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .chapter-info { padding: 15px; }
         .chapter-title { font-size: 1.4rem; color: #ff0000; margin: 0 0 8px 0; }
-        .chapter-desc { font-family: sans-serif; color: #ccc; margin-bottom: 12px; font-size: 0.9rem; }
+        .chapter-desc { font-family: sans-serif; color: #ccc; margin-bottom: 12px; font-size: 0.9rem; line-height: 1.4; }
         
-        .difficulty-tag { 
-            background: #ff0000; color: #fff; padding: 4px 10px; 
-            font-size: 0.65rem; border-radius: 3px; text-transform: uppercase; 
-        }
+        /* Tags de Dificuldade */
+        .difficulty-tag { color: #fff; padding: 4px 10px; font-size: 0.65rem; border-radius: 3px; text-transform: uppercase; font-weight: bold; }
+        .easy-bg { background: #28a745; }    /* Verde */
+        .normal-bg { background: #ffc107; color: #000; } /* Amarelo (texto preto para ler melhor) */
+        .medium-bg { background: #fd7e14; }  /* Laranja */
+        .event-bg { background: #b02e5c; }
+        .unknown-bg { background: #333; }
 
-        .locked-tag { 
-            position: absolute; background: #ff0000; color: #fff; padding: 5px 15px; 
-            transform: rotate(-5deg); border: 2px solid #fff; top: 15px; left: 15px; 
-            z-index: 5; font-size: 0.8rem; box-shadow: 0 0 10px #000;
-        }
+        .locked-tag { position: absolute; background: #ff0000; color: #fff; padding: 5px 15px; transform: rotate(-5deg); border: 2px solid #fff; top: 15px; left: 15px; z-index: 5; font-size: 0.8rem; }
     </style>
 </head>
 <body>
-
-    <header>
-        <a href="index.html" class="back-btn">⬅ BACK</a>
-        <h1 class="page-title">CHAPTERS</h1>
-    </header>
-
+    <header><a href="index.html" class="back-btn">⬅ BACK</a><h1 class="page-title">CHAPTERS</h1></header>
     <div class="divider"></div>
-
     <div class="container">
         
+        <div class="section-category">Event Chapters</div>
         <div class="chapter-card" style="border-color: #ff69b4;">
             <div class="img-container">
                 <div class="locked-tag">LOCKED</div>
-                <img src="valentine_chapter.png" alt="Valentine Event" class="chapter-img" style="opacity: 0.4;">
+                <img src="valentine_chapter.png" class="chapter-img" style="opacity: 0.4;">
             </div>
             <div class="chapter-info">
                 <h2 class="chapter-title" style="color: #ff69b4;">VALENTINE'S SPECIAL</h2>
                 <p class="chapter-desc">Locked update. Coming February 14th.</p>
-                <span class="difficulty-tag" style="background: #b02e5c;">EVENT</span>
+                <span class="difficulty-tag event-bg">EVENT</span>
             </div>
         </div>
 
+        <div class="section-category">Main Chapters</div>
         <div class="chapter-card">
-            <div class="img-container">
-                <img src="farm_chapter.png" alt="Farm" class="chapter-img">
-            </div>
+            <div class="img-container"><img src="farm_chapter.png" class="chapter-img"></div>
             <div class="chapter-info">
                 <h2 class="chapter-title">CHAPTER 1: FARM</h2>
-                <p class="chapter-desc">You begin your adventure by waking up in a barn. Along the way, you'll meet many new faces and possibly some familiar ones. Will you find the cure before your last hour is up?</p>
-                <span class="difficulty-tag">Easy</span>
+                <p class="chapter-desc">You begin your adventure by waking up in a barn. Will you find the cure before your last hour is up?</p>
+                <span class="difficulty-tag easy-bg">Easy</span>
             </div>
         </div>
 
         <div class="chapter-card">
-            <div class="img-container">
-                <img src="station_chapter.png" alt="Station" class="chapter-img">
-            </div>
+            <div class="img-container"><img src="station_chapter.png" class="chapter-img"></div>
             <div class="chapter-info">
                 <h2 class="chapter-title">CHAPTER 2: STATION</h2>
-                <p class="chapter-desc">After walking for miles, you finally find the Station. Something darker awaits you inside. Traverse the station and find the exit, but be careful-you're not alone...</p>
-                <span class="difficulty-tag">Normal</span>
+                <p class="chapter-desc">Something darker awaits you inside. Traverse the station and find the exit.</p>
+                <span class="difficulty-tag normal-bg">Normal</span>
             </div>
         </div>
 
         <div class="chapter-card" style="border-style: dashed; opacity: 0.6; background: rgba(20,20,20,0.5);">
-            <div class="img-container">
-                <div style="color: #444; font-size: 1rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">???</div>
-            </div>
+            <div class="img-container"><div style="color: #444; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">???</div></div>
             <div class="chapter-info">
                 <h2 class="chapter-title" style="color: #444;">CHAPTER 3: ???</h2>
-                <p class="chapter-desc">This location has not been discovered yet.</p>
-                <span class="difficulty-tag" style="background: #333;">Unknown</span>
+                <span class="difficulty-tag unknown-bg">Unknown</span>
+            </div>
+        </div>
+
+        <div class="section-category">Extra Chapters</div>
+        <div class="chapter-card" style="border-color: #9400d3;">
+            <div class="img-container"><img src="circus_chapter.png" class="chapter-img"></div>
+            <div class="chapter-info">
+                <h2 class="chapter-title" style="color: #9400d3;">NIGHTMARE CIRCUS</h2>
+                <p class="chapter-desc">Dive into Nightmare Circus and find out what really happened to Clark.</p>
+                <span class="difficulty-tag medium-bg">Medium</span>
             </div>
         </div>
 
     </div>
-
 </body>
 </html>
