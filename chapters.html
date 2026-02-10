@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapters | Piggy: The Last Hour</title>
+    <style>
+        body {
+            background-color: #0a0a0a;
+            background-image: radial-gradient(circle, #2c0000 0%, #050505 100%);
+            color: #fff;
+            font-family: 'Arial Black', sans-serif;
+            margin: 0; padding: 0;
+        }
+
+        header { 
+            width: 100%; padding: 20px 15px; background: rgba(0, 0, 0, 0.8); border-bottom: 5px solid #ff0000;
+            display: flex; flex-direction: column; align-items: center; gap: 15px; box-sizing: border-box;
+        }
+
+        .back-btn { color: #ff0000; text-decoration: none; border: 2px solid #ff0000; padding: 8px 15px; border-radius: 5px; align-self: flex-start; font-size: 0.8rem; }
+        .container { max-width: 900px; margin: 20px auto; padding: 15px; }
+        
+        .chapter-card { background: #1a1a1a; border: 4px solid #333; margin-bottom: 40px; border-radius: 10px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        .img-container { width: 100%; aspect-ratio: 16 / 9; background: #000; position: relative; overflow: hidden; }
+        .chapter-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        
+        .chapter-info { padding: 20px; background: linear-gradient(to bottom, #222, #111); }
+        .chapter-title { font-size: 1.8rem; color: #ff0000; margin: 0 0 10px 0; text-shadow: 2px 2px #000; }
+        .chapter-desc { font-family: sans-serif; color: #ccc; margin-bottom: 15px; }
+        .difficulty-tag { background: #ff0000; color: #fff; padding: 5px 12px; font-size: 0.7rem; border-radius: 3px; text-transform: uppercase; }
+
+        .locked-tag { position: absolute; background: #ff0000; color: #fff; padding: 5px 20px; transform: rotate(-5deg); border: 2px solid #fff; top: 20px; left: 20px; z-index: 5; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html" class="back-btn">⬅ BACK</a>
+        <h1>GAME CHAPTERS</h1>
+    </header>
+
+    <div class="container">
+        <div class="chapter-card" style="border-color: #ff69b4;">
+            <div class="img-container">
+                <div class="locked-tag">LOCKED</div>
+                <img src="valentine_chapter.png" alt="Valentine Event" class="chapter-img" style="opacity: 0.4;">
+            </div>
+            <div class="chapter-info">
+                <h2 class="chapter-title" style="color: #ff69b4;">VALENTINE'S SPECIAL</h2>
+                <p class="chapter-desc">Limited time event. Arriving Feb 14th with exclusive rewards.</p>
+                <span class="difficulty-tag" style="background: #b02e5c;">Coming Soon</span>
+            </div>
+        </div>
+
+        <div class="chapter-card">
+            <div class="img-container">
+                <img src="farm_chapter.png" alt="Chapter 1" class="chapter-img">
+            </div>
+            <div class="chapter-info">
+                <h2 class="chapter-title">CHAPTER 1: THE FARM</h2>
+                <p class="chapter-desc">The nightmare begins. Escape the barn and survive the infected farmer.</p>
+                <span class="difficulty-tag">Difficulty: Medium</span>
+            </div>
+        </div>
+
+        <div class="chapter-card">
+            <div class="img-container">
+                <img src="station_chapter.png" alt="Chapter 2" class="chapter-img">
+            </div>
+            <div class="chapter-info">
+                <h2 class="chapter-title">CHAPTER 2: THE STATION</h2>
+                <p class="chapter-desc">The police station is overrun. Use strategy to navigate the sirens.</p>
+                <span class="difficulty-tag">Difficulty: Hard</span>
+            </div>
+        </div>
+
+        <div class="chapter-card" style="border-style: dashed; opacity: 0.6;">
+            <div class="img-container">
+                <div style="color: #444; font-size: 1rem; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">EMPTY SLOT</div>
+            </div>
+            <div class="chapter-info">
+                <h2 class="chapter-title" style="color: #444;">CHAPTER 3: ???</h2>
+                <p class="chapter-desc">This chapter has not been discovered yet. Stay tuned for updates.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
