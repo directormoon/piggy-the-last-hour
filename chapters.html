@@ -26,7 +26,7 @@
         .chapter-title { font-size: 1.4rem; color: #ff0000; margin: 0 0 8px 0; }
         .chapter-desc { font-family: sans-serif; color: #ccc; margin-bottom: 12px; font-size: 0.9rem; line-height: 1.4; }
         
-        /* Tags */
+        /* Tags de Dificuldade */
         .difficulty-tag { color: #fff; padding: 4px 10px; font-size: 0.65rem; border-radius: 3px; text-transform: uppercase; font-weight: bold; }
         .easy-bg { background: #28a745; }    /* Verde */
         .normal-bg { background: #ffc107; color: #000; } /* Amarelo */
@@ -34,8 +34,12 @@
         .event-bg { background: #b02e5c; }
         .leak-bg { background: #555; }
 
+        /* Status Tags */
         .status-tag { position: absolute; background: #ff0000; color: #fff; padding: 5px 15px; transform: rotate(-5deg); border: 2px solid #fff; top: 15px; left: 15px; z-index: 5; font-size: 0.8rem; box-shadow: 0 0 10px #000; }
         .expired { background: #444; color: #aaa; border-color: #666; }
+        
+        /* Nova Tag "Soon" */
+        .soon-tag { position: absolute; background: #00ccff; color: #fff; padding: 5px 15px; transform: rotate(-5deg); border: 2px solid #fff; top: 15px; left: 15px; z-index: 5; font-size: 0.8rem; box-shadow: 0 0 15px #00ccff; }
     </style>
 </head>
 <body>
@@ -47,7 +51,7 @@
         
         <div class="chapter-card" style="border-color: #ff69b4;">
             <div class="img-container">
-                <div class="status-tag">LOCKED</div>
+                <div class="soon-tag">COMING SOON</div>
                 <img src="valentine_chapter.png" class="chapter-img" style="opacity: 0.4;">
             </div>
             <div class="chapter-info">
