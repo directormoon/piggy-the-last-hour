@@ -5,112 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Characters | Piggy: The Last Hour</title>
     <style>
-        /* Reset e Base */
         * { box-sizing: border-box; }
         body {
             background-color: #0a0a0a;
             background-image: radial-gradient(circle, #1a0000 0%, #050505 100%);
-            color: #fff; 
-            font-family: 'Arial Black', sans-serif; 
-            margin: 0; padding: 0; 
-            overflow-x: hidden; /* Impede a barra de rolagem lateral */
+            color: #fff; font-family: 'Arial Black', sans-serif; margin: 0; padding: 0; overflow-x: hidden;
         }
 
         header { 
-            width: 100%; 
-            padding: 20px 15px; 
-            background: rgba(0, 0, 0, 0.9); 
-            display: flex; 
-            flex-direction: column; 
-            align-items: center; 
-            gap: 15px; 
+            width: 100%; padding: 20px 15px; background: rgba(0, 0, 0, 0.9); 
+            display: flex; flex-direction: column; align-items: center; gap: 15px; 
         }
 
-        .nav-buttons {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
+        .nav-buttons { width: 100%; display: flex; justify-content: space-between; align-items: center; }
         .back-btn { 
             color: #ff0000; text-decoration: none; border: 2px solid #ff0000; 
             padding: 6px 10px; border-radius: 5px; font-size: 0.65rem; transition: 0.3s;
         }
-        
         .back-btn:hover { background: rgba(255, 0, 0, 0.1); }
 
         .page-title { font-size: 1.5rem; color: #e0e0e0; text-shadow: 2px 2px 4px #000; margin: 0; }
         .divider { width: 100%; height: 4px; background: #ff0000; box-shadow: 0 0 15px #ff0000; margin-bottom: 30px; }
         
-        /* Layout Grid Responsivo */
         .container { 
-            width: 100%; 
-            max-width: 900px; 
-            margin: 0 auto; 
-            padding: 0 15px 40px 15px; 
+            width: 100%; max-width: 900px; margin: 0 auto; padding: 0 15px 40px 15px; 
             display: grid;
-            /* O 1fr garante que o card ocupe o espaço disponível sem "estourar" o ecrã */
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
 
-        /* Estilo dos Títulos (Capítulos) */
         .chapter-section-title { 
-            color: #ff0000; 
-            font-size: 1.1rem; 
-            text-transform: uppercase; 
-            margin: 40px 0 10px 0; 
-            display: flex; 
-            align-items: center; 
-            gap: 15px; 
-            grid-column: 1 / -1; /* Sempre ocupa a largura total */
+            color: #ff0000; font-size: 1.1rem; text-transform: uppercase; 
+            margin: 40px 0 10px 0; display: flex; align-items: center; gap: 15px; 
+            grid-column: 1 / -1; 
         }
-        .chapter-section-title::after { 
-            content: ""; 
-            flex: 1; 
-            height: 2px; 
-            background: rgba(255, 0, 0, 0.3); 
-        }
+        .chapter-section-title::after { content: ""; flex: 1; height: 2px; background: rgba(255, 0, 0, 0.3); }
 
-        /* Card de Personagem */
-        .char-card { 
-            background: #151515; 
-            border: 2px solid #333; 
-            border-radius: 10px; 
-            overflow: hidden; 
-            transition: 0.3s; 
-            display: flex;
-            flex-direction: column;
-            width: 100%; /* Garante que respeita a grid */
-        }
-
+        .char-card { background: #151515; border: 2px solid #333; border-radius: 10px; overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; width: 100%; }
         .img-container { width: 100%; aspect-ratio: 16 / 9; background: #000; }
         .char-img { width: 100%; height: 100%; object-fit: cover; display: block; }
         
         .char-info { padding: 15px; flex-grow: 1; }
         .char-name { font-size: 1.2rem; margin: 0; color: #fff; }
         
-        .type-tag { 
-            display: inline-block; padding: 3px 8px; font-size: 0.65rem; 
-            border-radius: 3px; text-transform: uppercase; margin-top: 5px; 
-        }
+        .type-tag { display: inline-block; padding: 3px 8px; font-size: 0.65rem; border-radius: 3px; text-transform: uppercase; margin-top: 5px; }
         .survivor { background: #0088ff; color: #fff; }
         .infected { background: #ff0000; color: #fff; }
         .unknown { background: #444; color: #fff; }
 
-        .char-desc { 
-            font-family: sans-serif; 
-            font-size: 0.85rem; 
-            color: #aaa; 
-            margin-top: 10px; 
-            line-height: 1.4; 
-        }
+        .char-desc { font-family: sans-serif; font-size: 0.85rem; color: #aaa; margin-top: 10px; line-height: 1.4; }
 
-        /* Ajuste extra para ecrãs muito pequenos (iPhone SE, etc) */
         @media (max-width: 320px) {
             .container { grid-template-columns: 1fr; }
-            .chapter-section-title { font-size: 0.9rem; }
         }
     </style>
 </head>
@@ -118,14 +64,16 @@
     <header>
         <div class="nav-buttons">
             <a href="index.html" class="back-btn">⬅ MENU</a>
-            <a href="chapters.html" class="back-btn">CHAPTERS ➜</a>
+            <div style="display: flex; gap: 8px;">
+                <a href="chapters.html" class="back-btn">CHAPTERS ➜</a>
+                <a href="roleplay.html" class="back-btn">ROLEPLAY ➜</a>
+            </div>
         </div>
         <h1 class="page-title">CHARACTERS</h1>
     </header>
     <div class="divider"></div>
 
     <div class="container">
-        
         <div class="chapter-section-title">Chapter 1: Farm</div>
         
         <div class="char-card">
@@ -182,10 +130,9 @@
             <div class="char-info">
                 <h3 class="char-name">???</h3>
                 <span class="type-tag unknown">Classified</span>
-                <p class="char-desc">Target location not yet identified. All available data for this subject is currently encrypted or corrupted. Investigation pending.</p>
+                <p class="char-desc">Target location not yet identified. Investigation pending.</p>
             </div>
         </div>
-
     </div>
 </body>
 </html>
