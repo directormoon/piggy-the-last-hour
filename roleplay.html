@@ -26,7 +26,6 @@
 
         .page-title { font-size: 1.5rem; color: #e0e0e0; text-shadow: 2px 2px 4px #000; margin: 0; }
         
-        /* Linha vermelha com o espaçamento correto das outras páginas */
         .divider { width: 100%; height: 4px; background: #ff0000; box-shadow: 0 0 15px #ff0000; margin-bottom: 30px; }
         
         .container { 
@@ -44,7 +43,7 @@
             }
         }
 
-        /* Divisórias de Categoria (Estilo Characters) */
+        /* AS DIVISÕES QUE PEDISTE */
         .section-category { 
             color: #ff0000; font-size: 1.1rem; text-transform: uppercase; 
             margin: 40px 0 10px 0; display: flex; align-items: center; gap: 15px; 
@@ -52,7 +51,6 @@
         }
         .section-category::after { content: ""; flex: 1; height: 2px; background: rgba(255, 0, 0, 0.3); }
 
-        /* Estilo Base do Card */
         .skin-card { 
             background: #151515; border: 2px solid #333; border-radius: 10px; 
             overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; 
@@ -60,13 +58,6 @@
         }
         
         @media (min-width: 768px) { .skin-card { max-width: none; } }
-
-        /* Estilos Bonitos das Divisões que recuperei */
-        .skin-card.event-skin { border-color: #ff69b4; box-shadow: 0 0 10px rgba(255, 105, 180, 0.2); }
-        .skin-card.event-skin .skin-name { color: #ff69b4; }
-
-        .skin-card.secret-skin { border-color: #ffca28; box-shadow: 0 0 10px rgba(255, 202, 40, 0.2); }
-        .skin-card.secret-skin .skin-name { color: #ffca28; }
 
         .img-container { width: 100%; aspect-ratio: 1 / 1; background: #000; overflow: hidden; border-bottom: 2px solid #333; }
         .skin-img { width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -130,31 +121,7 @@
         </div>
 
         <div class="section-category">Extra Morphs</div>
-        
-        <div class="skin-card event-skin">
-            <div class="img-container"><img src="valentine_skin.png" class="skin-img"></div>
-            <div class="skin-info">
-                <h3 class="skin-name">Valentinny</h3>
-                <div class="how-to-box"><span class="how-label">Unlock:</span><p class="skin-how">Valentine Event</p></div>
-            </div>
         </div>
-
-        <div class="skin-card secret-skin">
-            <div class="img-container"><img src="secret_morph.png" class="skin-img"></div>
-            <div class="skin-info">
-                <h3 class="skin-name">Hidden One</h3>
-                <div class="how-to-box"><span class="how-label">Unlock:</span><p class="skin-how">Find the Secret Badge</p></div>
-            </div>
-        </div>
-
-        <div class="skin-card" style="border-style: dashed; opacity: 0.5;">
-            <div class="img-container" style="background: repeating-linear-gradient(45deg, #000, #000 10px, #0a0a0a 10px, #0a0a0a 20px);"></div>
-            <div class="skin-info">
-                <h3 class="skin-name" style="color: #444;">???</h3>
-                <div class="how-to-box"><p class="skin-how">Coming Soon</p></div>
-            </div>
-        </div>
-    </div>
 
     <footer>PIGGY: THE LAST HOUR // 2026</footer>
 </body>
