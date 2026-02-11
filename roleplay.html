@@ -10,84 +10,48 @@
         body {
             background-color: #0a0a0a;
             background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('https://tr.rbxcdn.com/180DAY-77747666510885/768/432/Image/WebP');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            color: #ffffff;
-            font-family: 'Arial Black', sans-serif;
-            margin: 0; padding: 0;
+            background-size: cover; background-position: center; background-attachment: fixed;
+            color: #ffffff; font-family: 'Arial Black', sans-serif; margin: 0; padding: 0;
         }
 
-        .back-btn {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: rgba(255, 0, 0, 0.1);
-            color: #ff0000;
-            text-decoration: none;
-            font-size: 0.7rem;
-            padding: 8px 15px;
-            border: 1px solid #ff0000;
-            border-radius: 4px;
-            z-index: 100;
+        header { padding: 20px 15px; background: rgba(0, 0, 0, 0.9); }
+
+        .nav-buttons { 
+            width: 100%; max-width: 1200px; margin: 0 auto; 
+            display: flex; justify-content: space-between; align-items: center; 
         }
 
-        header { padding: 80px 15px 40px 15px; text-align: center; }
+        .back-btn { 
+            color: #ff0000; text-decoration: none; border: 2px solid #ff0000; 
+            padding: 6px 10px; border-radius: 5px; font-size: 0.65rem; transition: 0.3s;
+        }
+        .back-btn:hover { background: rgba(255, 0, 0, 0.1); }
 
         .title {
-            font-size: clamp(2rem, 8vw, 3.5rem);
-            color: #ff0000;
-            text-transform: uppercase;
-            text-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 2px 2px 2px #000;
-            margin: 0;
+            text-align: center; font-size: clamp(2rem, 8vw, 3rem); color: #ff0000;
+            text-transform: uppercase; text-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 2px 2px 2px #000;
+            margin: 30px 0 0 0;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px 80px 15px;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 15px 80px 15px; }
 
-        .skins-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
+        .skins-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
 
         @media (min-width: 768px) {
             .skins-grid { grid-template-columns: repeat(3, 1fr); }
         }
 
-        .skin-card {
-            background: rgba(20, 20, 20, 0.95);
-            border: 2px solid #333;
-            border-radius: 15px;
-            overflow: hidden;
-            transition: 0.3s;
-        }
+        .skin-card { background: rgba(20, 20, 20, 0.95); border: 2px solid #333; border-radius: 15px; overflow: hidden; transition: 0.3s; }
         .skin-card:hover { transform: translateY(-5px); border-color: #666; }
 
-        /* VARIANTES DE CORES */
         .skin-card.event-skin { border-color: #ff69b4; box-shadow: 0 0 10px rgba(255, 105, 180, 0.2); }
         .skin-card.event-skin .skin-name { color: #ff69b4; }
 
         .skin-card.secret-skin { border-color: #ffca28; box-shadow: 0 0 10px rgba(255, 202, 40, 0.2); }
         .skin-card.secret-skin .skin-name { color: #ffca28; }
 
-        .skin-img-box {
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            background: #111;
-            overflow: hidden;
-            border-bottom: 2px solid #333;
-        }
-
-        .skin-img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: cover; 
-            object-position: center; 
-        }
+        .skin-img-box { width: 100%; aspect-ratio: 1 / 1; background: #111; overflow: hidden; border-bottom: 2px solid #333; }
+        .skin-img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
 
         .skin-info { padding: 20px; text-align: center; }
         .skin-name { color: #ff0000; font-size: 1.3rem; margin: 0 0 12px 0; text-transform: uppercase; }
@@ -100,72 +64,37 @@
     </style>
 </head>
 <body>
-
-<a href="index.html" class="back-btn">← BACK</a>
-
-<header>
-    <h1 class="title">Roleplay Skins</h1>
-</header>
-
-<div class="container">
-    <div class="skins-grid">
-
-        <div class="skin-card">
-            <div class="skin-img-box">
-                <img src="clarkmorph.png" class="skin-img">
-            </div>
-            <div class="skin-info">
-                <h3 class="skin-name">Clark</h3>
-                <div class="how-to-box">
-                    <span class="how-label">Cost:</span>
-                    <p class="skin-how">FREE</p>
-                </div>
+    <header>
+        <div class="nav-buttons">
+            <a href="index.html" class="back-btn">⬅ MENU</a>
+            <div style="display: flex; gap: 8px;">
+                <a href="characters.html" class="back-btn">CHARACTERS ➜</a>
+                <a href="chapters.html" class="back-btn">CHAPTERS ➜</a>
             </div>
         </div>
+        <h1 class="title">Roleplay Skins</h1>
+    </header>
 
-        <div class="skin-card">
-            <div class="skin-img-box">
-                <img src="cindymorph.png" class="skin-img">
+    <div class="container">
+        <div class="skins-grid">
+            <div class="skin-card">
+                <div class="skin-img-box"><img src="clarkmorph.png" class="skin-img"></div>
+                <div class="skin-info"><h3 class="skin-name">Clark</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div></div>
             </div>
-            <div class="skin-info">
-                <h3 class="skin-name">Cindy</h3>
-                <div class="how-to-box">
-                    <span class="how-label">Cost:</span>
-                    <p class="skin-how">FREE</p>
-                </div>
+            <div class="skin-card">
+                <div class="skin-img-box"><img src="cindymorph.png" class="skin-img"></div>
+                <div class="skin-info"><h3 class="skin-name">Cindy</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div></div>
+            </div>
+            <div class="skin-card">
+                <div class="skin-img-box"><img src="pippinmorph.png" class="skin-img"></div>
+                <div class="skin-info"><h3 class="skin-name">Pippin</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div></div>
+            </div>
+            <div class="skin-card">
+                <div class="skin-img-box"><img src="billmorph.png" class="skin-img"></div>
+                <div class="skin-info"><h3 class="skin-name">Bill</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div></div>
             </div>
         </div>
-
-        <div class="skin-card">
-            <div class="skin-img-box">
-                <img src="pippinmorph.png" class="skin-img">
-            </div>
-            <div class="skin-info">
-                <h3 class="skin-name">Pippin</h3>
-                <div class="how-to-box">
-                    <span class="how-label">Cost:</span>
-                    <p class="skin-how">FREE</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="skin-card">
-            <div class="skin-img-box">
-                <img src="billmorph.png" class="skin-img">
-            </div>
-            <div class="skin-info">
-                <h3 class="skin-name">Bill</h3>
-                <div class="how-to-box">
-                     <span class="how-label">Cost:</span>
-                     <p class="skin-how">FREE</p>
-                </div>
-            </div>
-        </div>
-
     </div>
-</div>
-
-<footer>PIGGY: THE LAST HOUR // 2026</footer>
-
+    <footer>PIGGY: THE LAST HOUR // 2026</footer>
 </body>
 </html>
