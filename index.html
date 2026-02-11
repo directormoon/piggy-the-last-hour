@@ -19,7 +19,6 @@
             overflow-x: hidden;
         }
 
-        /* Botão de Créditos */
         .credits-btn {
             position: absolute;
             top: 20px;
@@ -35,11 +34,7 @@
             z-index: 100;
         }
 
-        .credits-btn:hover {
-            background: #ff0000;
-            color: #fff;
-            box-shadow: 0 0 10px #ff0000;
-        }
+        .credits-btn:hover { background: #ff0000; color: #fff; box-shadow: 0 0 10px #ff0000; }
 
         header { padding: 40px 15px 20px 15px; text-align: center; width: 100%; }
 
@@ -76,6 +71,28 @@
             padding: 0 15px 40px 15px; 
         }
 
+        /* Seção de Updates */
+        .section-title {
+            color: #ff0000;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            margin: 40px 0 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .section-title::after { content: ""; flex: 1; height: 2px; background: rgba(255, 0, 0, 0.3); }
+
+        .update-card {
+            background: rgba(20, 20, 20, 0.9);
+            border-left: 5px solid #ff0000;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .update-date { color: #666; font-size: 0.7rem; font-family: sans-serif; display: block; margin-bottom: 5px; }
+        .update-text { font-family: sans-serif; font-size: 0.9rem; color: #ccc; margin: 0; }
+
         .event-banner {
             background: #b02e5c;
             border: 4px solid #ff69b4;
@@ -96,7 +113,6 @@
 
         .img-fluid { width: 100%; height: 100%; object-fit: cover; }
 
-        /* Tag SOON no Index - Brilho Removido */
         .soon-overlay {
             position: absolute;
             background: #00ccff; 
@@ -106,7 +122,6 @@
             transform: rotate(-5deg);
             border: 2px solid #fff;
             z-index: 5;
-            box-shadow: none; /* Brilho removido aqui */
         }
 
         .menu-grid {
@@ -135,7 +150,9 @@
             font-size: 1rem;
             border-radius: 8px;
             border-bottom: 4px solid #8b0000;
+            transition: 0.2s;
         }
+        .play-btn:hover { background: #cc0000; transform: translateY(-2px); }
 
         footer { text-align: center; padding: 40px 15px; color: #444; font-size: 0.7rem; }
     </style>
@@ -152,9 +169,10 @@
 <div class="divider"></div>
 
 <div class="container">
+    
     <div class="event-banner">
         <div class="img-container-16-9">
-            <div class="soon-overlay">COMING SOON</div>
+            <div class="soon-overlay">3 DAYS 🚨</div>
             <img src="valentine.png" alt="Valentine" class="img-fluid" style="opacity: 0.5;">
         </div>
         <div style="padding: 15px; text-align: center;">
@@ -163,6 +181,20 @@
         </div>
     </div>
 
+    <div class="section-title">Latest Updates</div>
+    
+    <div class="update-card">
+        <span class="update-date">FEBRUARY 08, 2026</span>
+        <p class="update-text">Thank you guys for 2K Interested! We cannot express a larger thank you for everyone's support,  we're sure this chapter will be extremely fun! 💖</p>
+        <img src="update.png" class="update-img" alt="Update">
+    </div>
+
+    <div class="update-card">
+        <span class="update-date">FEBRUARY 07, 2026</span>
+        <p class="update-text">Hello everyone! We’re excited to announce the 6 Years of Piggy code will be ending on 14th Feb! (Valentines Day) when the chapter releases.</p>
+    </div>
+
+    <div class="section-title">Quick Navigation</div>
     <div class="menu-grid">
         <div class="menu-card">
             <h3>CHARACTERS</h3>
