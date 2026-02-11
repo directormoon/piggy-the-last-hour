@@ -9,7 +9,7 @@
 
         body {
             background-color: #0a0a0a;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://tr.rbxcdn.com/180DAY-77747666510885/768/432/Image/WebP');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://tr.rbxcdn.com/180DAY-77747666510885/768/432/Image/WebP');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -23,37 +23,33 @@
             position: absolute;
             top: 20px;
             right: 20px;
-            background: rgba(255, 0, 0, 0.2);
+            background: rgba(255, 0, 0, 0.1);
             color: #ff0000;
             text-decoration: none;
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             padding: 8px 12px;
             border: 1px solid #ff0000;
             border-radius: 4px;
-            transition: 0.3s;
             z-index: 100;
         }
 
-        .credits-btn:hover { background: #ff0000; color: #fff; box-shadow: 0 0 10px #ff0000; }
-
-        header { padding: 40px 15px 20px 15px; text-align: center; width: 100%; }
+        header { padding: 50px 15px 30px 15px; text-align: center; }
 
         .game-title {
-            font-size: clamp(2rem, 8vw, 4.5rem);
+            font-size: clamp(2rem, 8vw, 4rem);
             margin: 0;
             color: #e0e0e0;
             line-height: 1;
-            text-shadow: -2px -2px 0 #666, 2px -2px 0 #666, -2px 2px 0 #666, 2px 2px 0 #666, 5px 5px 15px #000;
+            text-shadow: 2px 2px 10px #000;
         }
 
         .rewinded-subtitle {
-            font-size: clamp(1rem, 4vw, 2rem);
+            font-size: clamp(1rem, 4vw, 1.8rem);
             color: #ff0000;
             text-transform: uppercase;
             margin-top: 10px;
             display: block;
-            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 2px 2px 2px #000;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
         .divider {
@@ -66,95 +62,103 @@
 
         .container { 
             width: 100%;
-            max-width: 900px; 
+            max-width: 800px; 
             margin: 0 auto; 
-            padding: 0 15px 40px 15px; 
+            padding: 0 15px 60px 15px; 
         }
 
-        /* Seção de Updates */
         .section-title {
             color: #ff0000;
-            font-size: 1.1rem;
+            font-size: 1rem;
             text-transform: uppercase;
             margin: 40px 0 20px 0;
             display: flex;
             align-items: center;
             gap: 15px;
         }
-        .section-title::after { content: ""; flex: 1; height: 2px; background: rgba(255, 0, 0, 0.3); }
+        .section-title::after { content: ""; flex: 1; height: 2px; background: rgba(255, 0, 0, 0.2); }
 
         .update-card {
-            background: rgba(20, 20, 20, 0.9);
-            border-left: 5px solid #ff0000;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 4px;
-        }
-        .update-date { color: #666; font-size: 0.7rem; font-family: sans-serif; display: block; margin-bottom: 5px; }
-        .update-text { font-family: sans-serif; font-size: 0.9rem; color: #ccc; margin: 0; }
-
-        .event-banner {
-            background: #b02e5c;
-            border: 4px solid #ff69b4;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            overflow: hidden;
+            background: rgba(15, 15, 15, 0.95);
+            border-left: 4px solid #ff0000;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
         }
 
-        .img-container-16-9 {
+        .update-date { color: #555; font-size: 0.7rem; font-family: sans-serif; display: block; margin-bottom: 10px; }
+        .update-text { font-family: sans-serif; font-size: 0.95rem; color: #ddd; margin: 0 0 15px 0; line-height: 1.5; }
+        
+        /* AJUSTE PARA IMAGENS MENORES */
+        .update-img-container {
             width: 100%;
-            aspect-ratio: 16 / 9;
-            background: #000;
-            position: relative;
             display: flex;
+            justify-content: flex-start; /* Alinha à esquerda como no print */
+            margin: 15px 0;
+        }
+
+        .update-img { 
+            width: 100%;
+            max-width: 320px; /* Tamanho reduzido */
+            height: auto; 
+            border-radius: 8px;
+            border: 1px solid #333;
+            display: block;
+        }
+
+        .interested-badge {
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
-        }
-
-        .img-fluid { width: 100%; height: 100%; object-fit: cover; }
-
-        .soon-overlay {
-            position: absolute;
-            background: #00ccff; 
+            gap: 8px;
+            background: rgba(255,255,255,0.05);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
             color: #fff;
-            padding: 5px 20px;
-            font-size: clamp(1rem, 4vw, 1.5rem);
-            transform: rotate(-5deg);
-            border: 2px solid #fff;
-            z-index: 5;
+            margin-bottom: 15px;
+            font-family: sans-serif;
         }
+
+        .desc-list {
+            list-style: none;
+            padding: 0;
+            margin: 15px 0;
+            font-family: sans-serif;
+            font-size: 0.9rem;
+            color: #eee;
+        }
+        .desc-list li { margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
 
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: 1fr;
             gap: 20px;
         }
+        @media (min-width: 600px) { .menu-grid { grid-template-columns: 1fr 1fr; } }
 
         .menu-card {
-            background: rgba(30, 30, 30, 0.95);
-            border: 3px solid #444;
+            background: rgba(25, 25, 25, 0.8);
+            border: 2px solid #333;
             border-radius: 12px;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
         }
-
-        .menu-card h3 { color: #ff0000; margin: 0 0 10px 0; font-size: 1.5rem; }
-        .menu-card p { font-family: sans-serif; color: #bbb; font-size: 0.9rem; margin-bottom: 20px; }
+        .menu-card h3 { color: #ff0000; margin: 0 0 10px 0; font-size: 1.3rem; }
+        .menu-card p { font-family: sans-serif; color: #888; font-size: 0.85rem; margin-bottom: 20px; }
 
         .play-btn {
-            display: block;
+            display: inline-block;
+            width: 100%;
             background: #ff0000;
             color: #fff;
             text-decoration: none;
             padding: 12px;
-            font-size: 1rem;
-            border-radius: 8px;
-            border-bottom: 4px solid #8b0000;
-            transition: 0.2s;
+            font-size: 0.9rem;
+            border-radius: 6px;
+            font-weight: bold;
         }
-        .play-btn:hover { background: #cc0000; transform: translateY(-2px); }
 
-        footer { text-align: center; padding: 40px 15px; color: #444; font-size: 0.7rem; }
+        footer { text-align: center; padding: 60px 15px; color: #333; font-size: 0.7rem; border-top: 1px solid #111; }
     </style>
 </head>
 <body>
@@ -170,28 +174,32 @@
 
 <div class="container">
     
-    <div class="event-banner">
-        <div class="img-container-16-9">
-            <div class="soon-overlay">3 DAYS 🚨</div>
-            <img src="valentine.png" alt="Valentine" class="img-fluid" style="opacity: 0.5;">
-        </div>
-        <div style="padding: 15px; text-align: center;">
-            <h2 style="margin: 0; color: #ff69b4; font-size: 1.2rem;">VALENTINE'S CHAPTER</h2>
-            <p style="font-family: sans-serif; font-size: 0.8rem; margin: 5px 0 0 0;">RELEASING FEBRUARY 14TH</p>
-        </div>
-    </div>
-
     <div class="section-title">Latest Updates</div>
     
     <div class="update-card">
         <span class="update-date">FEBRUARY 08, 2026</span>
-        <p class="update-text">Thank you guys for 2K Interested! We cannot express a larger thank you for everyone's support,  we're sure this chapter will be extremely fun! 💖</p>
-        <img src="update.png" class="update-img" alt="Update">
+        <p class="update-text">Thank you guys for 2K Interested! We cannot express a larger thank you for everyone's support, we're sure this chapter will be extremely fun! 💖</p>
+        
+        <div class="update-img-container">
+            <img src="update.png" class="update-img" alt="Update Image">
+        </div>
+
+        <div class="interested-badge">
+            👤 2K Interested
+        </div>
+
+        <div style="color: #ff0000; font-size: 1.1rem; margin-top: 10px; border-top: 1px solid #222; padding-top: 15px;">Description</div>
+        <ul class="desc-list">
+            <li>❤️ New Valentine's Chapter</li>
+            <li>💗 BRAND NEW *Legacy* Game</li>
+            <li>🎁 New Rewards! 🍬</li>
+            <li>🌟 New Lore! 💞</li>
+        </ul>
     </div>
 
     <div class="update-card">
         <span class="update-date">FEBRUARY 07, 2026</span>
-        <p class="update-text">Hello everyone! We’re excited to announce the 6 Years of Piggy code will be ending on 14th Feb! (Valentines Day) when the chapter releases.</p>
+        <p class="update-text">Hello everyone! We’re excited to announce the 6 Years of Piggy code will be ending on 14th Feb! (Valentine's Day) when the chapter releases.</p>
     </div>
 
     <div class="section-title">Quick Navigation</div>
@@ -199,16 +207,18 @@
         <div class="menu-card">
             <h3>CHARACTERS</h3>
             <p>Explore all available characters.</p>
-            <a href="characters.html" class="play-btn">VIEW ALL</a>
+            <a href="characters.html" class="play-btn">VIEW SKINS</a>
         </div>
         <div class="menu-card">
             <h3>CHAPTERS</h3>
-            <p>Explore all available maps.</p>
+            <p>Access the maps and status.</p>
             <a href="chapters.html" class="play-btn">ENTER MAPS</a>
         </div>
     </div>
+
 </div>
 
 <footer>PIGGY: THE LAST HOUR // 2026</footer>
+
 </body>
 </html>
