@@ -46,15 +46,24 @@
             }
         }
 
-        /* DIVISÕES COM LINHA MAIS ESPESSA */
+        /* DIVISÓRIAS - LINHA AJUSTADA PARA 2PX */
         .section-category { 
-            color: #ff0000; font-size: 1.1rem; text-transform: uppercase; 
-            margin: 40px 0 15px 0; display: flex; align-items: center; gap: 15px; 
-            grid-column: 1 / -1; width: 100%;
+            color: #ff0000; 
+            font-size: 1rem; 
+            text-transform: uppercase; 
+            margin: 40px 0 10px 0; 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+            grid-column: 1 / -1; 
+            width: 100%;
         }
+
         .section-category::after { 
-            content: ""; flex: 1; height: 2px; /* Linha um pouco mais espessa */
-            background: rgba(255, 0, 0, 0.6);
+            content: ""; 
+            flex: 1; 
+            height: 2px; /* Aumentado 1 pixel como pediste */
+            background: #440000; 
         }
 
         .skin-card { 
@@ -65,7 +74,6 @@
         
         @media (min-width: 768px) { .skin-card { max-width: none; } }
 
-        /* IMAGEM 1:1 (QUADRADA) */
         .img-container { width: 100%; aspect-ratio: 1 / 1; background: #000; overflow: hidden; border-bottom: 2px solid #333; }
         .skin-img { width: 100%; height: 100%; object-fit: cover; display: block; }
         
@@ -144,4 +152,4 @@
 
     <footer>PIGGY: THE LAST HOUR // 2026</footer>
 </body>
-            </html>
+</html>
