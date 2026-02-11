@@ -13,23 +13,26 @@
         }
 
         header { 
-            width: 100%; padding: 20px 15px; background: rgba(0, 0, 0, 0.9); 
-            display: flex; flex-direction: column; align-items: center; gap: 15px; 
+            width: 100%; padding: 20px 15px 40px 15px; /* Aumentado para dar o espaço da imagem */
+            background: rgba(0, 0, 0, 0.9); 
+            display: flex; flex-direction: column; align-items: center; gap: 25px; 
         }
 
-        .nav-buttons { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+        .nav-buttons { width: 100%; max-width: 1100px; display: flex; justify-content: space-between; align-items: center; }
+        
         .back-btn { 
             color: #ff0000; text-decoration: none; border: 2px solid #ff0000; 
-            padding: 6px 10px; border-radius: 5px; font-size: 0.65rem; transition: 0.3s;
+            padding: 6px 12px; border-radius: 5px; font-size: 0.7rem; transition: 0.3s;
+            background: black;
         }
-        .back-btn:hover { background: rgba(255, 0, 0, 0.1); }
+        .back-btn:hover { background: rgba(255, 0, 0, 0.2); }
 
-        .page-title { font-size: 1.5rem; color: #e0e0e0; text-shadow: 2px 2px 4px #000; margin: 0; }
+        .page-title { font-size: 1.8rem; color: #fff; text-shadow: 2px 2px 4px #000; margin: 0; text-transform: uppercase; }
         
-        .divider { width: 100%; height: 4px; background: #ff0000; box-shadow: 0 0 15px #ff0000; margin-bottom: 30px; }
+        .divider { width: 100%; height: 4px; background: #ff0000; box-shadow: 0 0 15px #ff0000; }
         
         .container { 
-            width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 15px 40px 15px; 
+            width: 100%; max-width: 1100px; margin: 0 auto; padding: 20px 15px 60px 15px; 
             display: grid;
             grid-template-columns: 1fr; 
             gap: 30px;
@@ -43,31 +46,34 @@
             }
         }
 
-        /* DIVISÕES COM TÍTULO */
+        /* DIVISÕES IGUAIS À SCREENSHOT */
         .section-category { 
             color: #ff0000; font-size: 1.1rem; text-transform: uppercase; 
-            margin: 40px 0 10px 0; display: flex; align-items: center; gap: 15px; 
-            grid-column: 1 / -1; 
+            margin: 40px 0 15px 0; display: flex; align-items: center; gap: 15px; 
+            grid-column: 1 / -1; width: 100%;
         }
-        .section-category::after { content: ""; flex: 1; height: 2px; background: rgba(255, 0, 0, 0.3); }
+        .section-category::after { 
+            content: ""; flex: 1; height: 1px; /* Linha mais fina */
+            background: rgba(255, 0, 0, 0.5); /* Cor mais suave */
+        }
 
         .skin-card { 
-            background: #151515; border: 2px solid #333; border-radius: 10px; 
+            background: #151515; border: 2px solid #333; border-radius: 12px; 
             overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; 
-            width: 100%; max-width: 350px; cursor: default; user-select: none;
+            width: 100%; max-width: 350px; cursor: default;
         }
         
         @media (min-width: 768px) { .skin-card { max-width: none; } }
 
-        .img-container { width: 100%; aspect-ratio: 1 / 1; background: #000; overflow: hidden; border-bottom: 2px solid #333; }
+        .img-container { width: 100%; aspect-ratio: 16 / 9; background: #000; overflow: hidden; }
         .skin-img { width: 100%; height: 100%; object-fit: cover; display: block; }
         
-        .skin-info { padding: 15px; flex-grow: 1; text-align: center; }
-        .skin-name { font-size: 1.2rem; margin: 0 0 10px 0; color: #fff; text-transform: uppercase; }
+        .skin-info { padding: 20px; flex-grow: 1; text-align: left; } /* Alinhado à esquerda como na foto */
+        .skin-name { font-size: 1.3rem; margin: 0 0 8px 0; color: #fff; }
         
-        .how-to-box { background: rgba(255, 255, 255, 0.05); padding: 8px; border-radius: 6px; }
-        .how-label { color: #666; display: block; font-size: 0.6rem; text-transform: uppercase; margin-bottom: 2px; font-family: sans-serif; }
-        .skin-how { font-family: sans-serif; font-size: 0.85rem; color: #eee; margin: 0; }
+        .how-to-box { background: rgba(255, 255, 255, 0.05); padding: 10px; border-radius: 8px; margin-top: 10px; }
+        .how-label { color: #666; display: block; font-size: 0.65rem; text-transform: uppercase; margin-bottom: 4px; font-family: sans-serif; font-weight: bold; }
+        .skin-how { font-family: sans-serif; font-size: 0.9rem; color: #ccc; margin: 0; }
 
         footer { text-align: center; padding: 60px 0; color: #333; font-size: 0.7rem; }
     </style>
@@ -76,9 +82,9 @@
     <header>
         <div class="nav-buttons">
             <a href="index.html" class="back-btn">⬅ MENU</a>
-            <div style="display: flex; gap: 8px;">
-                <a href="characters.html" class="back-btn">CHARACTERS ➜</a>
+            <div style="display: flex; gap: 10px;">
                 <a href="chapters.html" class="back-btn">CHAPTERS ➜</a>
+                <a href="characters.html" class="back-btn">CHARACTERS ➜</a>
             </div>
         </div>
         <h1 class="page-title">ROLEPLAY SKINS</h1>
@@ -92,7 +98,10 @@
             <div class="img-container"><img src="clarkmorph.png" class="skin-img"></div>
             <div class="skin-info">
                 <h3 class="skin-name">Clark</h3>
-                <div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div>
+                <div class="how-to-box">
+                    <span class="how-label">Cost:</span>
+                    <p class="skin-how">FREE</p>
+                </div>
             </div>
         </div>
 
@@ -100,7 +109,10 @@
             <div class="img-container"><img src="cindymorph.png" class="skin-img"></div>
             <div class="skin-info">
                 <h3 class="skin-name">Cindy</h3>
-                <div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div>
+                <div class="how-to-box">
+                    <span class="how-label">Cost:</span>
+                    <p class="skin-how">FREE</p>
+                </div>
             </div>
         </div>
 
@@ -108,7 +120,10 @@
             <div class="img-container"><img src="pippinmorph.png" class="skin-img"></div>
             <div class="skin-info">
                 <h3 class="skin-name">Pippin</h3>
-                <div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div>
+                <div class="how-to-box">
+                    <span class="how-label">Cost:</span>
+                    <p class="skin-how">FREE</p>
+                </div>
             </div>
         </div>
 
@@ -116,7 +131,10 @@
             <div class="img-container"><img src="billmorph.png" class="skin-img"></div>
             <div class="skin-info">
                 <h3 class="skin-name">Bill</h3>
-                <div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div>
+                <div class="how-to-box">
+                    <span class="how-label">Cost:</span>
+                    <p class="skin-how">FREE</p>
+                </div>
             </div>
         </div>
 
