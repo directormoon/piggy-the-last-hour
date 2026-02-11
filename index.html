@@ -33,7 +33,7 @@
             z-index: 100;
         }
 
-        header { padding: 50px 15px 30px 15px; text-align: center; }
+        header { padding: 50px 15px 30px 15px; text-align: center; width: 100%; }
 
         .game-title {
             font-size: clamp(2rem, 8vw, 4rem);
@@ -87,47 +87,23 @@
         }
 
         .update-date { color: #555; font-size: 0.7rem; font-family: sans-serif; display: block; margin-bottom: 10px; }
-        .update-text { font-family: sans-serif; font-size: 0.95rem; color: #ddd; margin: 0 0 15px 0; line-height: 1.5; }
+        .update-text { font-family: sans-serif; font-size: 0.95rem; color: #ddd; margin: 0; line-height: 1.5; }
         
-        /* AJUSTE PARA IMAGENS MENORES */
         .update-img-container {
             width: 100%;
             display: flex;
-            justify-content: flex-start; /* Alinha à esquerda como no print */
-            margin: 15px 0;
+            justify-content: flex-start;
+            margin-top: 15px;
         }
 
         .update-img { 
             width: 100%;
-            max-width: 320px; /* Tamanho reduzido */
+            max-width: 200px; /* Imagem menor como solicitado */
             height: auto; 
-            border-radius: 8px;
+            border-radius: 6px;
             border: 1px solid #333;
             display: block;
         }
-
-        .interested-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255,255,255,0.05);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            color: #fff;
-            margin-bottom: 15px;
-            font-family: sans-serif;
-        }
-
-        .desc-list {
-            list-style: none;
-            padding: 0;
-            margin: 15px 0;
-            font-family: sans-serif;
-            font-size: 0.9rem;
-            color: #eee;
-        }
-        .desc-list li { margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
 
         .menu-grid {
             display: grid;
@@ -179,27 +155,14 @@
     <div class="update-card">
         <span class="update-date">FEBRUARY 08, 2026</span>
         <p class="update-text">Thank you guys for 2K Interested! We cannot express a larger thank you for everyone's support, we're sure this chapter will be extremely fun! 💖</p>
-        
         <div class="update-img-container">
-            <img src="update.png" class="update-img" alt="Update Image">
+            <img src="update.png" class="update-img" alt="Update">
         </div>
-
-        <div class="interested-badge">
-            👤 2K Interested
-        </div>
-
-        <div style="color: #ff0000; font-size: 1.1rem; margin-top: 10px; border-top: 1px solid #222; padding-top: 15px;">Description</div>
-        <ul class="desc-list">
-            <li>❤️ New Valentine's Chapter</li>
-            <li>💗 BRAND NEW *Legacy* Game</li>
-            <li>🎁 New Rewards! 🍬</li>
-            <li>🌟 New Lore! 💞</li>
-        </ul>
     </div>
 
     <div class="update-card">
         <span class="update-date">FEBRUARY 07, 2026</span>
-        <p class="update-text">Hello everyone! We’re excited to announce the 6 Years of Piggy code will be ending on 14th Feb! (Valentine's Day) when the chapter releases.</p>
+        <p class="update-text">Hello everyone! We’re excited to announce the 6 Years of Piggy code will be ending on 14th Feb! (Valentines Day) when the chapter releases.</p>
     </div>
 
     <div class="section-title">Quick Navigation</div>
@@ -207,18 +170,16 @@
         <div class="menu-card">
             <h3>CHARACTERS</h3>
             <p>Explore all available characters.</p>
-            <a href="characters.html" class="play-btn">VIEW SKINS</a>
+            <a href="characters.html" class="play-btn">VIEW ALL</a>
         </div>
         <div class="menu-card">
             <h3>CHAPTERS</h3>
-            <p>Access the maps and status.</p>
+            <p>Explore all available maps.</p>
             <a href="chapters.html" class="play-btn">ENTER MAPS</a>
         </div>
     </div>
-
 </div>
 
 <footer>PIGGY: THE LAST HOUR // 2026</footer>
-
 </body>
 </html>
