@@ -12,44 +12,55 @@
             color: #fff; font-family: 'Arial Black', sans-serif; margin: 0; padding: 0; overflow-x: hidden;
         }
         
+        /* HEADER - ESCALA PADRONIZADA */
         header { 
             width: 100%; padding: 20px 15px; background: rgba(0, 0, 0, 0.9); 
             display: flex; flex-direction: column; align-items: center; gap: 15px; 
         }
 
-        .nav-buttons { width: 100%; display: flex; justify-content: space-between; align-items: center; }
+        .nav-buttons { width: 100%; max-width: 900px; display: flex; justify-content: space-between; align-items: center; }
         .back-btn { 
             color: #ff0000; text-decoration: none; border: 2px solid #ff0000; 
             padding: 6px 10px; border-radius: 5px; font-size: 0.65rem; transition: 0.3s;
+            background: black;
         }
         .back-btn:hover { background: rgba(255, 0, 0, 0.1); }
 
-        .divider { width: 100%; height: 4px; background: #ff0000; box-shadow: 0 0 15px #ff0000; margin-bottom: 30px; }
-        
-        .section-category { 
-            color: #ff0000; font-size: 1.1rem; text-transform: uppercase; 
-            margin: 40px 0 20px 0; display: flex; align-items: center; gap: 15px; 
-            grid-column: 1 / -1; 
-        }
-        .section-category::after { content: ""; flex: 1; height: 2px; background: rgba(255, 0, 0, 0.3); }
+        .page-title { font-size: 1.5rem; color: #e0e0e0; text-shadow: 2px 2px 4px #000; margin: 0; text-transform: uppercase; }
 
+        .divider { width: 100%; height: 4px; background: #ff0000; box-shadow: 0 0 15px #ff0000; }
+        
+        /* DIVISÓRIAS */
+        .section-category { 
+            color: #ff0000; font-size: 1rem; text-transform: uppercase; 
+            margin: 40px 0 15px 0; display: flex; align-items: center; gap: 15px; 
+            grid-column: 1 / -1; width: 100%;
+        }
+        .section-category::after { 
+            content: ""; flex: 1; height: 2px; 
+            background: #440000; 
+        }
+
+        /* GRID: DOIS POR LINHA NO MOBILE E PC */
         .container { 
-            width: 100%; max-width: 900px; margin: 0 auto; padding: 0 15px 40px 15px; 
+            width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 10px 40px 10px; 
             display: grid;
-            grid-template-columns: 1fr; 
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 12px;
         }
 
         @media (min-width: 768px) {
-            .container { grid-template-columns: 1fr 1fr; }
+            .container { gap: 25px; padding: 0 15px 40px 15px; }
         }
 
+        /* CARDS DE CAPÍTULO */
         .chapter-card { 
-            background: #1a1a1a; border: 3px solid #333; border-radius: 10px; 
+            background: #151515; border: 2px solid #333; border-radius: 10px; 
             overflow: hidden; position: relative; display: flex; flex-direction: column;
+            transition: 0.3s; width: 100%;
         }
 
-        .img-container { width: 100%; aspect-ratio: 16 / 9; background: #000; position: relative; }
+        .img-container { width: 100%; aspect-ratio: 16 / 9; background: #000; position: relative; border-bottom: 2px solid #333; }
         .chapter-img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
         .mystery-overlay {
@@ -58,24 +69,41 @@
             pointer-events: none;
         }
         
-        .chapter-info { padding: 15px; flex-grow: 1; }
-        .chapter-title { font-size: 1.4rem; color: #ff0000; margin: 0 0 8px 0; }
-        .chapter-desc { font-family: sans-serif; color: #ccc; margin-bottom: 12px; font-size: 0.9rem; line-height: 1.4; }
+        .chapter-info { padding: 10px; flex-grow: 1; display: flex; flex-direction: column; gap: 5px; }
+        @media (min-width: 768px) { .chapter-info { padding: 15px; gap: 8px; } }
+
+        .chapter-title { font-size: 0.85rem; color: #ff0000; margin: 0; text-transform: uppercase; }
+        @media (min-width: 768px) { .chapter-title { font-size: 1.2rem; } }
         
-        .difficulty-tag { display: inline-block; color: #fff; padding: 4px 10px; font-size: 0.65rem; border-radius: 3px; text-transform: uppercase; font-weight: bold; }
+        /* TEXTO LIVRE SEM CAIXA */
+        .chapter-desc { font-family: sans-serif; color: #aaa; margin: 0; font-size: 0.7rem; line-height: 1.3; flex-grow: 1; }
+        @media (min-width: 768px) { .chapter-desc { font-size: 0.85rem; line-height: 1.4; } }
+        
+        .difficulty-tag { 
+            display: inline-block; color: #fff; padding: 3px 8px; font-size: 0.55rem; 
+            border-radius: 4px; text-transform: uppercase; font-weight: bold; width: fit-content;
+            margin-top: 5px;
+        }
+        @media (min-width: 768px) { .difficulty-tag { padding: 5px 12px; font-size: 0.6rem; } }
+
         .easy-bg { background: #28a745; }
         .normal-bg { background: #ffc107; color: #000; }
         .medium-bg { background: #fd7e14; }
         .event-bg { background: #b02e5c; }
         
         .status-tag, .soon-tag { 
-            position: absolute; color: #fff; padding: 5px 15px; 
-            transform: rotate(-5deg); border: 2px solid #fff; 
-            top: 15px; left: 15px; z-index: 5; font-size: 0.8rem; 
+            position: absolute; color: #fff; padding: 3px 8px; 
+            transform: rotate(-5deg); border: 1px solid #fff; 
+            top: 8px; left: 8px; z-index: 5; font-size: 0.6rem; font-weight: bold;
+        }
+        @media (min-width: 768px) { 
+            .status-tag, .soon-tag { padding: 4px 12px; border: 2px solid #fff; top: 12px; left: 12px; font-size: 0.75rem; }
         }
         .status-tag { background: #ff0000; }
         .soon-tag { background: #00ccff; }
         .expired { background: #444; color: #aaa; border-color: #666; }
+
+        footer { text-align: center; padding: 40px 0; color: #333; font-size: 0.7rem; }
     </style>
 </head>
 <body>
@@ -87,7 +115,7 @@
                 <a href="roleplay.html" class="back-btn">ROLEPLAY ➜</a>
             </div>
         </div>
-        <h1 style="font-size: 1.5rem; margin: 0;">CHAPTERS</h1>
+        <h1 class="page-title">CHAPTERS</h1>
     </header>
     <div class="divider"></div>
 
@@ -162,8 +190,6 @@
         </div>
     </div>
 
-    <footer style="text-align: center; color: #444; font-size: 0.7rem; padding: 40px 0;">
-        PIGGY: THE LAST HOUR // 2026
-    </footer>
+    <footer>PIGGY: THE LAST HOUR // 2026</footer>
 </body>
-                                           </html>
+</html>
