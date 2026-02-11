@@ -12,16 +12,15 @@
             color: #fff; font-family: 'Arial Black', sans-serif; margin: 0; padding: 0; overflow-x: hidden;
         }
 
-        /* HEADER REDUZIDO PARA IGUALAR AS OUTRAS PÁGINAS */
+        /* HEADER - ESCALA ORIGINAL */
         header { 
-            width: 100%; padding: 20px 15px; /* Reduzido de 40px para 20px */
+            width: 100%; padding: 20px 15px; 
             background: rgba(0, 0, 0, 0.9); 
             display: flex; flex-direction: column; align-items: center; gap: 15px; 
         }
 
         .nav-buttons { width: 100%; max-width: 900px; display: flex; justify-content: space-between; align-items: center; }
         
-        /* BOTÕES EM TAMANHO ORIGINAL */
         .back-btn { 
             color: #ff0000; text-decoration: none; border: 2px solid #ff0000; 
             padding: 6px 10px; border-radius: 5px; font-size: 0.65rem; transition: 0.3s;
@@ -29,7 +28,6 @@
         }
         .back-btn:hover { background: rgba(255, 0, 0, 0.1); }
 
-        /* TÍTULO EM TAMANHO ORIGINAL (1.5rem) */
         .page-title { font-size: 1.5rem; color: #e0e0e0; text-shadow: 2px 2px 4px #000; margin: 0; text-transform: uppercase; }
         
         .divider { width: 100%; height: 4px; background: #ff0000; box-shadow: 0 0 15px #ff0000; }
@@ -49,8 +47,9 @@
             }
         }
 
+        /* DIVISÓRIAS - LINHA 2PX ESCURA */
         .section-category { 
-            color: #ff0000; font-size: 1.1rem; text-transform: uppercase; 
+            color: #ff0000; font-size: 1rem; text-transform: uppercase; 
             margin: 40px 0 10px 0; display: flex; align-items: center; gap: 15px; 
             grid-column: 1 / -1; width: 100%;
         }
@@ -59,6 +58,7 @@
             background: #440000;
         }
 
+        /* CARDS */
         .skin-card { 
             background: #151515; border: 2px solid #333; border-radius: 10px; 
             overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; 
@@ -71,10 +71,20 @@
         .skin-img { width: 100%; height: 100%; object-fit: cover; display: block; }
         
         .skin-info { padding: 15px; flex-grow: 1; text-align: left; }
-        .skin-name { font-size: 1.2rem; margin: 0 0 8px 0; color: #fff; }
+        .skin-name { font-size: 1.2rem; margin: 0 0 10px 0; color: #fff; }
         
-        .how-to-box { background: rgba(255, 255, 255, 0.05); padding: 10px; border-radius: 8px; }
-        .how-label { color: #666; display: block; font-size: 0.65rem; text-transform: uppercase; margin-bottom: 4px; font-family: sans-serif; font-weight: bold; }
+        /* CAIXA DENTRO DA CAIXA (UI IMPROVED) */
+        .how-to-box { 
+            background: rgba(0, 0, 0, 0.4); 
+            padding: 12px; 
+            border-radius: 8px; 
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .how-label { 
+            color: #555; display: block; font-size: 0.6rem; 
+            text-transform: uppercase; margin-bottom: 4px; 
+            font-family: sans-serif; font-weight: bold; letter-spacing: 1px;
+        }
         .skin-how { font-family: sans-serif; font-size: 0.85rem; color: #aaa; margin: 0; }
 
         footer { text-align: center; padding: 40px 0; color: #333; font-size: 0.7rem; }
