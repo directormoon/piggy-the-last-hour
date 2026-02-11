@@ -12,30 +12,33 @@
             color: #fff; font-family: 'Arial Black', sans-serif; margin: 0; padding: 0; overflow-x: hidden;
         }
 
+        /* HEADER REDUZIDO PARA IGUALAR AS OUTRAS PÁGINAS */
         header { 
-            width: 100%; padding: 20px 15px 40px 15px; 
+            width: 100%; padding: 20px 15px; /* Reduzido de 40px para 20px */
             background: rgba(0, 0, 0, 0.9); 
-            display: flex; flex-direction: column; align-items: center; gap: 25px; 
+            display: flex; flex-direction: column; align-items: center; gap: 15px; 
         }
 
-        .nav-buttons { width: 100%; max-width: 1100px; display: flex; justify-content: space-between; align-items: center; }
+        .nav-buttons { width: 100%; max-width: 900px; display: flex; justify-content: space-between; align-items: center; }
         
+        /* BOTÕES EM TAMANHO ORIGINAL */
         .back-btn { 
             color: #ff0000; text-decoration: none; border: 2px solid #ff0000; 
-            padding: 6px 12px; border-radius: 5px; font-size: 0.7rem; transition: 0.3s;
+            padding: 6px 10px; border-radius: 5px; font-size: 0.65rem; transition: 0.3s;
             background: black;
         }
-        .back-btn:hover { background: rgba(255, 0, 0, 0.2); }
+        .back-btn:hover { background: rgba(255, 0, 0, 0.1); }
 
-        .page-title { font-size: 1.8rem; color: #fff; text-shadow: 2px 2px 4px #000; margin: 0; text-transform: uppercase; }
+        /* TÍTULO EM TAMANHO ORIGINAL (1.5rem) */
+        .page-title { font-size: 1.5rem; color: #e0e0e0; text-shadow: 2px 2px 4px #000; margin: 0; text-transform: uppercase; }
         
         .divider { width: 100%; height: 4px; background: #ff0000; box-shadow: 0 0 15px #ff0000; }
         
         .container { 
-            width: 100%; max-width: 1100px; margin: 0 auto; padding: 20px 15px 60px 15px; 
+            width: 100%; max-width: 900px; margin: 0 auto; padding: 0 15px 40px 15px; 
             display: grid;
             grid-template-columns: 1fr; 
-            gap: 30px;
+            gap: 20px;
             justify-items: center;
         }
 
@@ -46,30 +49,20 @@
             }
         }
 
-        /* DIVISÓRIAS - LINHA AJUSTADA PARA 2PX */
         .section-category { 
-            color: #ff0000; 
-            font-size: 1rem; 
-            text-transform: uppercase; 
-            margin: 40px 0 10px 0; 
-            display: flex; 
-            align-items: center; 
-            gap: 15px; 
-            grid-column: 1 / -1; 
-            width: 100%;
+            color: #ff0000; font-size: 1.1rem; text-transform: uppercase; 
+            margin: 40px 0 10px 0; display: flex; align-items: center; gap: 15px; 
+            grid-column: 1 / -1; width: 100%;
         }
-
         .section-category::after { 
-            content: ""; 
-            flex: 1; 
-            height: 2px; /* Aumentado 1 pixel como pediste */
-            background: #440000; 
+            content: ""; flex: 1; height: 2px; 
+            background: #440000;
         }
 
         .skin-card { 
-            background: #151515; border: 2px solid #333; border-radius: 12px; 
+            background: #151515; border: 2px solid #333; border-radius: 10px; 
             overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; 
-            width: 100%; max-width: 350px; cursor: default;
+            width: 100%; max-width: 350px;
         }
         
         @media (min-width: 768px) { .skin-card { max-width: none; } }
@@ -77,21 +70,21 @@
         .img-container { width: 100%; aspect-ratio: 1 / 1; background: #000; overflow: hidden; border-bottom: 2px solid #333; }
         .skin-img { width: 100%; height: 100%; object-fit: cover; display: block; }
         
-        .skin-info { padding: 20px; flex-grow: 1; text-align: left; }
-        .skin-name { font-size: 1.3rem; margin: 0 0 8px 0; color: #fff; }
+        .skin-info { padding: 15px; flex-grow: 1; text-align: left; }
+        .skin-name { font-size: 1.2rem; margin: 0 0 8px 0; color: #fff; }
         
-        .how-to-box { background: rgba(255, 255, 255, 0.05); padding: 10px; border-radius: 8px; margin-top: 10px; }
+        .how-to-box { background: rgba(255, 255, 255, 0.05); padding: 10px; border-radius: 8px; }
         .how-label { color: #666; display: block; font-size: 0.65rem; text-transform: uppercase; margin-bottom: 4px; font-family: sans-serif; font-weight: bold; }
-        .skin-how { font-family: sans-serif; font-size: 0.9rem; color: #ccc; margin: 0; }
+        .skin-how { font-family: sans-serif; font-size: 0.85rem; color: #aaa; margin: 0; }
 
-        footer { text-align: center; padding: 60px 0; color: #333; font-size: 0.7rem; }
+        footer { text-align: center; padding: 40px 0; color: #333; font-size: 0.7rem; }
     </style>
 </head>
 <body>
     <header>
         <div class="nav-buttons">
             <a href="index.html" class="back-btn">⬅ MENU</a>
-            <div style="display: flex; gap: 10px;">
+            <div style="display: flex; gap: 8px;">
                 <a href="chapters.html" class="back-btn">CHAPTERS ➜</a>
                 <a href="characters.html" class="back-btn">CHARACTERS ➜</a>
             </div>
