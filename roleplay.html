@@ -27,21 +27,19 @@
         .back-btn { 
             color: #ff0000; text-decoration: none; border: 2px solid #ff0000; 
             padding: 6px 10px; border-radius: 5px; font-size: 0.65rem; transition: 0.3s;
+            cursor: pointer;
         }
         .back-btn:hover { background: rgba(255, 0, 0, 0.1); }
 
         .page-title { font-size: 1.5rem; color: #e0e0e0; text-shadow: 2px 2px 4px #000; margin: 0; }
         
-        /* LINHA VERMELHA IGUAL ÀS OUTRAS */
         .divider { width: 100%; height: 4px; background: #ff0000; box-shadow: 0 0 15px #ff0000; margin-bottom: 30px; }
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 15px 80px 15px; }
 
-        /* ESTILO DAS CATEGORIAS */
         .section-category { 
             color: #ff0000; font-size: 1.1rem; text-transform: uppercase; 
             margin: 40px 0 20px 0; display: flex; align-items: center; gap: 15px; 
-            grid-column: 1 / -1; 
         }
         .section-category::after { content: ""; flex: 1; height: 2px; background: rgba(255, 0, 0, 0.3); }
 
@@ -49,19 +47,26 @@
             display: grid; 
             grid-template-columns: 1fr; 
             gap: 30px; 
+            margin-bottom: 50px;
         }
 
         @media (min-width: 768px) {
             .skins-grid { grid-template-columns: repeat(3, 1fr); }
         }
 
-        .skin-card { background: rgba(20, 20, 20, 0.95); border: 2px solid #333; border-radius: 15px; overflow: hidden; transition: 0.3s; }
-        .skin-card:hover { transform: translateY(-5px); border-color: #666; }
+        /* CARD NÃO CLICÁVEL */
+        .skin-card { 
+            background: rgba(20, 20, 20, 0.95); 
+            border: 2px solid #333; 
+            border-radius: 15px; 
+            overflow: hidden; 
+            cursor: default; /* Rato normal, indica que não é link */
+            user-select: none; /* Impede selecionar texto acidentalmente */
+        }
 
-        /* VARIANTES */
-        .skin-card.event-skin { border-color: #ff69b4; box-shadow: 0 0 10px rgba(255, 105, 180, 0.2); }
+        .skin-card.event-skin { border-color: #ff69b4; }
         .skin-card.event-skin .skin-name { color: #ff69b4; }
-        .skin-card.secret-skin { border-color: #ffca28; box-shadow: 0 0 10px rgba(255, 202, 40, 0.2); }
+        .skin-card.secret-skin { border-color: #ffca28; }
         .skin-card.secret-skin .skin-name { color: #ffca28; }
 
         .skin-img-box { width: 100%; aspect-ratio: 1 / 1; background: #111; overflow: hidden; border-bottom: 2px solid #333; }
@@ -96,32 +101,49 @@
         <div class="skins-grid">
             <div class="skin-card">
                 <div class="skin-img-box"><img src="clarkmorph.png" class="skin-img"></div>
-                <div class="skin-info"><h3 class="skin-name">Clark</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div></div>
+                <div class="skin-info">
+                    <h3 class="skin-name">Clark</h3>
+                    <div class="how-to-box">
+                        <span class="how-label">Cost:</span>
+                        <p class="skin-how">FREE</p>
+                    </div>
+                </div>
             </div>
             <div class="skin-card">
                 <div class="skin-img-box"><img src="cindymorph.png" class="skin-img"></div>
-                <div class="skin-info"><h3 class="skin-name">Cindy</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div></div>
+                <div class="skin-info">
+                    <h3 class="skin-name">Cindy</h3>
+                    <div class="how-to-box">
+                        <span class="how-label">Cost:</span>
+                        <p class="skin-how">FREE</p>
+                    </div>
+                </div>
             </div>
             <div class="skin-card">
                 <div class="skin-img-box"><img src="pippinmorph.png" class="skin-img"></div>
-                <div class="skin-info"><h3 class="skin-name">Pippin</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div></div>
+                <div class="skin-info">
+                    <h3 class="skin-name">Pippin</h3>
+                    <div class="how-to-box">
+                        <span class="how-label">Cost:</span>
+                        <p class="skin-how">FREE</p>
+                    </div>
+                </div>
             </div>
             <div class="skin-card">
                 <div class="skin-img-box"><img src="billmorph.png" class="skin-img"></div>
-                <div class="skin-info"><h3 class="skin-name">Bill</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div></div>
+                <div class="skin-info">
+                    <h3 class="skin-name">Bill</h3>
+                    <div class="how-to-box">
+                        <span class="how-label">Cost:</span>
+                        <p class="skin-how">FREE</p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="section-category">Extra Morphs</div>
         <div class="skins-grid">
-            <div class="skin-card" style="border-style: dashed; opacity: 0.5;">
-                <div class="skin-img-box" style="background: repeating-linear-gradient(45deg, #000, #000 10px, #0a0a0a 10px, #0a0a0a 20px);"></div>
-                <div class="skin-info">
-                    <h3 class="skin-name" style="color: #444;">???</h3>
-                    <div class="how-to-box"><p class="skin-how">Locked Content</p></div>
-                </div>
             </div>
-        </div>
 
     </div>
 
