@@ -19,38 +19,47 @@
             overflow-x: hidden;
         }
 
+        /* BOTÃO CREDITS COM ANIMAÇÃO */
         .credits-btn {
             position: absolute;
             top: 20px;
             right: 20px;
-            background: rgba(255, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.8);
             color: #ff0000;
             text-decoration: none;
             font-size: 0.65rem;
             padding: 8px 12px;
-            border: 1px solid #ff0000;
-            border-radius: 4px;
+            border: 2px solid #ff0000;
+            border-radius: 5px;
             z-index: 100;
+            transition: 0.3s ease;
+            display: inline-block;
+        }
+        .credits-btn:hover { 
+            background: rgba(255, 0, 0, 0.1); 
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
         }
 
-        header { padding: 50px 15px 30px 15px; text-align: center; width: 100%; }
+        header { padding: 60px 15px 40px 15px; text-align: center; width: 100%; }
 
         .game-title {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-size: clamp(2.2rem, 10vw, 4.5rem);
             margin: 0;
             color: #e0e0e0;
             line-height: 1;
+            text-transform: uppercase;
             text-shadow: -2px -2px 0 #666, 2px -2px 0 #666, -2px 2px 0 #666, 2px 2px 0 #666, 5px 5px 15px #000;
         }
 
         .rewinded-subtitle {
-            font-size: clamp(1rem, 4vw, 2rem);
+            font-size: clamp(1rem, 5vw, 2rem);
             color: #ff0000;
             text-transform: uppercase;
-            margin-top: 10px;
+            margin-top: 15px;
             display: block;
             text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 2px 2px 2px #000;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
         .divider {
@@ -68,12 +77,14 @@
             padding: 0 15px 60px 15px; 
         }
 
+        /* EVENT BANNER - ESTÁTICO */
         .event-banner {
-            background: #b02e5c;
-            border: 4px solid #ff69b4;
+            background: #151515;
+            border: 3px solid #ff69b4;
             border-radius: 12px;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
             overflow: hidden;
+            box-shadow: 0 0 20px rgba(255, 105, 180, 0.2);
         }
 
         .img-container-16-9 {
@@ -81,21 +92,19 @@
             aspect-ratio: 16 / 9;
             background: #000;
             position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
-        .img-fluid { width: 100%; height: 100%; object-fit: cover; }
+        .img-fluid { width: 100%; height: 100%; object-fit: cover; display: block; }
 
         .soon-overlay {
             position: absolute;
             background: #00ccff; 
             color: #fff;
-            padding: 5px 20px;
-            font-size: clamp(1rem, 4vw, 1.5rem);
+            padding: 6px 18px;
+            font-size: 0.8rem;
             transform: rotate(-5deg);
             border: 2px solid #fff;
+            top: 15px; left: 15px;
             z-index: 5;
         }
 
@@ -108,71 +117,71 @@
             align-items: center;
             gap: 15px;
         }
-        .section-title::after { content: ""; flex: 1; height: 2px; background: rgba(255, 0, 0, 0.2); }
-
-        .update-card {
-            background: rgba(15, 15, 15, 0.95);
-            border-left: 4px solid #ff0000;
-            padding: 20px;
-            margin-bottom: 25px;
-            border-radius: 0 8px 8px 0;
+        .section-title::after { 
+            content: ""; flex: 1; height: 2px; 
+            background: #440000; 
         }
 
-        .update-date { color: #555; font-size: 0.7rem; font-family: sans-serif; display: block; margin-bottom: 10px; }
-        .update-text { font-family: sans-serif; font-size: 0.95rem; color: #ddd; margin: 0; line-height: 1.5; }
-        
-        .update-img-container {
-            width: 100%;
-            display: flex;
-            justify-content: flex-start;
-            margin-top: 15px;
-        }
-
-        .update-img { 
-            width: 100%;
-            max-width: 300px; 
-            height: auto; 
-            border-radius: 6px;
-            border: 1px solid #333;
-            display: block;
-        }
-
-        /* GRID ATUALIZADA PARA 3 BOTÕES */
+        /* MENU GRID - CAIXAS ESTÁTICAS */
         .menu-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 20px;
+            gap: 15px;
+            margin-bottom: 20px;
         }
         @media (min-width: 768px) { 
-            .menu-grid { grid-template-columns: repeat(3, 1fr); } 
+            .menu-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; } 
         }
 
         .menu-card {
-            background: rgba(25, 25, 25, 0.8);
+            background: rgba(20, 20, 20, 0.9);
             border: 2px solid #333;
             border-radius: 12px;
-            padding: 20px;
+            padding: 25px 20px;
             text-align: center;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
         }
-        .menu-card h3 { color: #ff0000; margin: 0 0 10px 0; font-size: 1.2rem; }
-        .menu-card p { font-family: sans-serif; color: #888; font-size: 0.8rem; margin-bottom: 20px; }
+        
+        .menu-card h3 { color: #fff; margin: 0 0 10px 0; font-size: 1.1rem; text-transform: uppercase; }
+        .menu-card p { font-family: sans-serif; color: #777; font-size: 0.8rem; margin-bottom: 20px; flex-grow: 1; line-height: 1.4; }
 
+        /* BOTÃO COM ANIMAÇÃO */
         .play-btn {
             display: inline-block;
-            width: 100%;
             background: #ff0000;
             color: #fff;
             text-decoration: none;
-            padding: 10px;
-            font-size: 0.85rem;
+            padding: 12px;
+            font-size: 0.8rem;
             border-radius: 6px;
             font-weight: bold;
-            transition: 0.3s;
+            transition: 0.3s ease;
+            text-transform: uppercase;
         }
-        .play-btn:hover { background: #b30000; transform: scale(1.02); }
+        .play-btn:hover { 
+            background: #b30000; 
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+        }
+
+        /* UPDATE CARDS - ESTÁTICOS */
+        .update-card {
+            background: rgba(15, 15, 15, 0.9);
+            border-left: 4px solid #ff0000;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .update-date { color: #555; font-size: 0.65rem; font-family: sans-serif; display: block; margin-bottom: 8px; font-weight: bold; }
+        .update-text { font-family: sans-serif; font-size: 0.9rem; color: #ccc; margin: 0; line-height: 1.5; }
+        
+        .update-img { 
+            width: 100%; max-width: 350px; 
+            height: auto; border-radius: 6px; 
+            border: 1px solid #333; display: block; margin-top: 15px;
+        }
 
         footer { text-align: center; padding: 60px 15px; color: #333; font-size: 0.7rem; border-top: 1px solid #111; }
     </style>
@@ -195,20 +204,37 @@
             <div class="soon-overlay">3 DAYS 🚨</div>
             <img src="valentine.png" alt="Valentine" class="img-fluid" style="opacity: 0.5;">
         </div>
-        <div style="padding: 15px; text-align: center;">
-            <h2 style="margin: 0; color: #ff69b4; font-size: 1.2rem;">VALENTINE'S CHAPTER</h2>
-            <p style="font-family: sans-serif; font-size: 0.8rem; margin: 5px 0 0 0;">RELEASING FEBRUARY 14TH</p>
+        <div style="padding: 18px; text-align: center; background: rgba(255, 105, 180, 0.1);">
+            <h2 style="margin: 0; color: #ff69b4; font-size: 1.2rem; text-transform: uppercase;">Valentine's Chapter</h2>
+            <p style="font-family: sans-serif; font-size: 0.8rem; margin: 5px 0 0 0; color: #ff69b4; font-weight: bold;">RELEASING FEBRUARY 14TH</p>
         </div>
     </div>
     
+    <div class="section-title">Explore Content</div>
+    <div class="menu-grid">
+        <div class="menu-card">
+            <h3>Characters</h3>
+            <p>Meet the survivors and the infected lurking in the dark.</p>
+            <a href="characters.html" class="play-btn">View Characters</a>
+        </div>
+        <div class="menu-card">
+            <h3>Chapters</h3>
+            <p>Explore all maps from the Farm to the Station.</p>
+            <a href="chapters.html" class="play-btn">Enter Maps</a>
+        </div>
+        <div class="menu-card">
+            <h3>Roleplay</h3>
+            <p>Check out the special morphs and roleplay skins.</p>
+            <a href="roleplay.html" class="play-btn">View Skins</a>
+        </div>
+    </div>
+
     <div class="section-title">Latest Updates</div>
     
     <div class="update-card">
         <span class="update-date">FEBRUARY 08, 2026</span>
         <p class="update-text">Thank you guys for 2K Interested! We cannot express a larger thank you for everyone's support, we're sure this chapter will be extremely fun! 💖</p>
-        <div class="update-img-container">
-            <img src="update.png" class="update-img" alt="Update">
-        </div>
+        <img src="update.png" class="update-img" alt="Update">
     </div>
 
     <div class="update-card">
@@ -216,24 +242,6 @@
         <p class="update-text">Hello everyone! We’re excited to announce the 6 Years of Piggy code will be ending on 14th Feb! (Valentines Day) when the chapter releases.</p>
     </div>
 
-    <div class="section-title">Quick Navigation</div>
-    <div class="menu-grid">
-        <div class="menu-card">
-            <h3>CHARACTERS</h3>
-            <p>Explore all available characters.</p>
-            <a href="characters.html" class="play-btn">VIEW ALL</a>
-        </div>
-        <div class="menu-card">
-            <h3>CHAPTERS</h3>
-            <p>Explore all available maps.</p>
-            <a href="chapters.html" class="play-btn">ENTER MAPS</a>
-        </div>
-        <div class="menu-card">
-            <h3>ROLEPLAY</h3>
-            <p>Check all available Roleplay skins.</p>
-            <a href="roleplay.html" class="play-btn">VIEW SKINS</a>
-        </div>
-    </div>
 </div>
 
 <footer>PIGGY: THE LAST HOUR // 2026</footer>
