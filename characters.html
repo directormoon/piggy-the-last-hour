@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Characters | Piggy: The Last Hour</title>
     <style>
-        /* --- CONFIGURAÇÕES GERAIS --- */
         * { box-sizing: border-box; }
         body {
             background-color: #0a0a0a;
@@ -13,69 +12,84 @@
             color: #fff; font-family: 'Arial Black', sans-serif; margin: 0; padding: 0; overflow-x: hidden;
         }
 
-        /* --- HEADER --- */
+        /* HEADER - ESCALA PADRONIZADA */
         header { 
             width: 100%; padding: 20px 15px; background: rgba(0, 0, 0, 0.9); 
             display: flex; flex-direction: column; align-items: center; gap: 15px; 
         }
+
         .nav-buttons { width: 100%; max-width: 900px; display: flex; justify-content: space-between; align-items: center; }
         .back-btn { 
             color: #ff0000; text-decoration: none; border: 2px solid #ff0000; 
             padding: 6px 10px; border-radius: 5px; font-size: 0.65rem; transition: 0.3s;
             background: black;
         }
-        .back-btn:hover { background: rgba(255, 0, 0, 0.1); transform: scale(1.05); }
+        .back-btn:hover { background: rgba(255, 0, 0, 0.1); }
+
         .page-title { font-size: 1.5rem; color: #e0e0e0; text-shadow: 2px 2px 4px #000; margin: 0; text-transform: uppercase; }
         .divider { width: 100%; height: 4px; background: #ff0000; box-shadow: 0 0 15px #ff0000; }
         
-        /* --- ESTRUTURA DE CATEGORIAS --- */
+        /* CONTAINER: 2 COLUNAS NO MOBILE, 4 NO PC */
+        .container { 
+            width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 10px 40px 10px; 
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 12px;
+            justify-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .container { 
+                grid-template-columns: repeat(4, 1fr); 
+                gap: 20px;
+                padding: 0 15px 40px 15px;
+                justify-items: stretch;
+            }
+        }
+
+        /* DIVISÓRIAS - LINHA 2PX ESCURA */
         .chapter-section-title { 
             color: #ff0000; font-size: 1rem; text-transform: uppercase; 
             margin: 40px 0 15px 0; display: flex; align-items: center; gap: 15px; 
             grid-column: 1 / -1; width: 100%;
         }
-        .chapter-section-title::after { content: ""; flex: 1; height: 2px; background: #440000; }
-
-        /* --- GRID: 2 COLUNAS MOBILE / 4 NO PC --- */
-        .container { 
-            width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 10px 40px 10px; 
-            display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; justify-items: center;
-        }
-        @media (min-width: 768px) {
-            .container { grid-template-columns: repeat(4, 1fr); gap: 20px; padding: 0 15px 40px 15px; justify-items: stretch; }
+        .chapter-section-title::after { 
+            content: ""; flex: 1; height: 2px; 
+            background: #440000; 
         }
 
-        /* --- ESTILO DOS CARDS (Borda Grossa Preta) --- */
+        /* CARDS */
         .char-card { 
-            background: #151515; border: 4px solid #000000; border-radius: 12px; 
-            overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; width: 100%;
+            background: #151515; border: 2px solid #333; border-radius: 10px; 
+            overflow: hidden; transition: 0.3s; display: flex; flex-direction: column; 
+            width: 100%;
         }
-        .char-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
         
-        .img-container { width: 100%; aspect-ratio: 1 / 1; background: #000; border-bottom: 4px solid #000; }
+        .img-container { width: 100%; aspect-ratio: 1 / 1; background: #000; border-bottom: 2px solid #333; }
         .char-img { width: 100%; height: 100%; object-fit: cover; display: block; }
         
-        .char-info { padding: 12px; flex-grow: 1; text-align: left; }
+        .char-info { padding: 10px; flex-grow: 1; text-align: left; }
+        @media (min-width: 768px) { .char-info { padding: 15px; } }
 
-        /* --- TÍTULOS COM CONTORNO --- */
-        .char-name { 
-            font-size: 0.9rem; margin: 0; color: #ffffff;
-            text-shadow: 2px 2px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
-        }
-        @media (min-width: 768px) { .char-name { font-size: 1.1rem; } }
+        .char-name { font-size: 0.9rem; margin: 0; color: #fff; }
+        @media (min-width: 768px) { .char-name { font-size: 1.2rem; } }
         
-        /* --- TAGS DE TIPO --- */
         .type-tag { 
             display: inline-block; padding: 3px 8px; font-size: 0.55rem; 
-            border-radius: 3px; text-transform: uppercase; margin-top: 8px; font-weight: bold;
+            border-radius: 3px; text-transform: uppercase; margin-top: 5px; font-weight: bold;
         }
+        @media (min-width: 768px) { .type-tag { font-size: 0.65rem; } }
+
         .survivor { background: #0088ff; color: #fff; }
         .infected { background: #ff0000; color: #fff; }
-        .unknown { background: #333; color: #888; border: 1px solid #111; }
+        .unknown { background: #444; color: #fff; }
 
-        /* --- DESCRIÇÕES --- */
-        .char-desc { font-family: sans-serif; font-size: 0.7rem; color: #aaa; margin-top: 10px; line-height: 1.3; }
-        @media (min-width: 768px) { .char-desc { font-size: 0.8rem; } }
+        /* TEXTO LIVRE SEM CAIXA */
+        .char-desc { 
+            font-family: sans-serif; font-size: 0.7rem; color: #aaa; 
+            margin-top: 10px; line-height: 1.3; 
+        }
+        @media (min-width: 768px) { .char-desc { font-size: 0.8rem; line-height: 1.4; } }
 
         footer { text-align: center; padding: 40px 0; color: #333; font-size: 0.7rem; }
     </style>
@@ -94,7 +108,6 @@
     <div class="divider"></div>
 
     <div class="container">
-
         <div class="chapter-section-title">Chapter 1: Farm</div>
         
         <div class="char-card">
@@ -114,7 +127,6 @@
                 <p class="char-desc">Clark, was a kind loving cow. His parents met their demise at the circus when he was younger, Clark later met & fell inlove with Cindy. they now owned a farm together.</p>
             </div>
         </div>
-
 
         <div class="chapter-section-title">Chapter 2: Station</div>
         
@@ -145,18 +157,16 @@
             </div>
         </div>
 
-
         <div class="chapter-section-title">Chapter 3: ???</div>
         
-        <div class="char-card" style="border-style: dashed; border-color: #333; opacity: 0.6;">
-            <div class="img-container" style="background: repeating-linear-gradient(45deg, #000, #000 10px, #050505 10px, #050505 20px);"></div>
+        <div class="char-card" style="border-style: dashed; opacity: 0.5;">
+            <div class="img-container" style="background: repeating-linear-gradient(45deg, #000, #000 10px, #0a0a0a 10px, #0a0a0a 20px);"></div>
             <div class="char-info">
                 <h3 class="char-name">???</h3>
                 <span class="type-tag unknown">Classified</span>
-                <p class="char-desc" style="color: #666;">Target location not yet identified. Investigation pending.</p>
+                <p class="char-desc">Target location not yet identified. Investigation pending.</p>
             </div>
         </div>
-
     </div>
 
     <footer>PIGGY: THE LAST HOUR // 2026</footer>
