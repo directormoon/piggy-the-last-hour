@@ -60,7 +60,7 @@
         }
         .section-category::after { content: ""; flex: 1; height: 2px; background: #440000; }
 
-        /* NOVAS TAGS DE ATRIBUIÇÃO FÁCIL */
+        /* TAGS SYSTEM */
         .tag {
             display: inline-block;
             color: #000;
@@ -72,9 +72,9 @@
             vertical-align: middle;
             margin-left: 5px;
         }
-        .badge { background: #00ccff; } /* Azul */
-        .code { background: #00ff7f; }  /* Verde */
-        .gamepass { background: #ffa500; } /* Laranja */
+        .badge { background: #00ccff; }
+        .code { background: #00ff7f; }
+        .gamepass { background: #ffa500; }
 
         .skin-card { background: #151515; border: 2px solid #333; border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; width: 100%; }
         .img-container { width: 100%; aspect-ratio: 1 / 1; background: #000; overflow: hidden; border-bottom: 2px solid #333; }
@@ -105,93 +105,51 @@
 
     <div class="container">
         <div class="section-category">Main Morphs</div>
-        
-        <div class="skin-card">
-            <div class="img-container"><img src="clarkmorph.png" class="skin-img"></div>
-            <div class="skin-info">
-                <h3 class="skin-name">Clark</h3>
-                <div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div>
-            </div>
-        </div>
+        <div class="skin-card"><div class="img-container"><img src="clarkmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Clark</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="cindymorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Cindy</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="pippinmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Pippin</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="billmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Bill</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div></div></div>
+
         <div class="section-category">Extra Morphs</div>
-
-        <div class="skin-card">
-            <div class="img-container"><img src="cindyfallenmorph.png" class="skin-img"></div>
-            <div class="skin-info">
-                <h3 class="skin-name">Cindy [Fallen] <span class="tag badge">Badge</span></h3>
-                <div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Completed Farm: Badge</p></div>
-            </div>
-        </div>
-
-        <div class="skin-card">
-            <div class="img-container"><img src="error.png" class="skin-img"></div>
-            <div class="skin-info">
-                <h3 class="skin-name">NOTMEANTOEXIST.EXE <span class="tag badge">Badge</span></h3>
-                <div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Completed Twisted Farm: Badge</p></div>
-            </div>
-        </div>
-
-        <div class="skin-card">
-            <div class="img-container"><img src="cindycookiemorph.png" class="skin-img"></div>
-            <div class="skin-info">
-                <h3 class="skin-name">Cindy [Cookie] <span class="tag badge">Badge</span></h3>
-                <div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Completed Cookie Cutter Badge</p></div>
-            </div>
-        </div>
-
-        <div class="skin-card">
-            <div class="img-container"><img src="goopmorph.png" class="skin-img"></div>
-            <div class="skin-info">
-                <h3 class="skin-name">Goop <span class="tag code">Code</span></h3>
-                <div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Redeemed Milestone Code</p></div>
-            </div>
-        </div>
-
-        <div class="skin-card">
-            <div class="img-container"><img src="primrosemorph.png" class="skin-img"></div>
-            <div class="skin-info">
-                <h3 class="skin-name">Primrose <span class="tag code">Code</span></h3>
-                <div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Redeemed Primrose Code</p></div>
-            </div>
-        </div>
-
-        <div class="skin-card">
-            <div class="img-container"><img src="piggymorph.png" class="skin-img"></div>
-            <div class="skin-info">
-                <h3 class="skin-name">Piggy [Classic] <span class="tag code">Code</span></h3>
-                <div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Redeemed 6 Years of Piggy Code</p></div>
-            </div>
-        </div>
+        <div class="skin-card"><div class="img-container"><img src="cindyfallenmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Cindy [Fallen] <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Completed Farm: Badge</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="error.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">NOTMEANTOEXIST.EXE <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Completed Twisted Farm: Badge</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="cindycookiemorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Cindy [Cookie] <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Completed Cookie Cutter Badge</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="error.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">ABICYCLEFOR2.EXE <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">GIVEMEYOURANSWER.EXE: Badge</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="billfallenmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Bill [Fallen] <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Completed Station: Badge</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="shilohmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Shiloh <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Note Taker: Badge</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="cashmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Cash</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Joined Community!</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="goopmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Goop <span class="tag code">Code</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Redeemed Milestone Code</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="spindlemorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Spindle <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Nightmare Circus: Badge</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="turkicmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Turkic <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Thanksgiving 2025: Badge</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="catgrinchmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Cat Grinch <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">The Frostbound: Badge</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="devilsantamorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Devil Santa <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">The Frostbound: Badge</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="thewitchmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">The Witch <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Unlocked The Witch: Badge</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="snowpolarmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Snow Polar <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Tier 1: Reward</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="nutcrackermorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">NutCracker <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Tier 2: Reward</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="krampgoatmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">KrampGoat <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Tier 3: Reward</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="permafrostmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">PermaFrost <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Tier 4: Reward</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="perlaelfmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Perla [Elf] <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Candy Carrier: Badge</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="primrosemorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Primrose <span class="tag code">Code</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Code: Primrose</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="clark2026morph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Clark [New Year] <span class="tag code">Code</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Code: New Year</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="cailleachmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Cailleach</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Contest 1st Place</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="saraimorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Sarai</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Contest 2nd Place</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="icedoggymorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Ice Doggy</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Contest 3rd Place</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="knight1morph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Knight 1 <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Mini-Collab 2: Badge</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="piggymorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Piggy [Classic] <span class="tag code">Code</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Code: 6 Years</p></div></div></div>
 
         <div class="section-category">Gamepass Morphs</div>
-
-        <div class="skin-card">
-            <div class="img-container"><img src="tomlegacymorph.png" class="skin-img"></div>
-            <div class="skin-info">
-                <h3 class="skin-name">Tom [Legacy] <span class="tag gamepass">Gamepass</span></h3>
-                <div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Tom (Legacy): Gamepass Pack</p></div>
-            </div>
-        </div>
-
-        <div class="skin-card">
-            <div class="img-container"><img src="danielmorph.png" class="skin-img"></div>
-            <div class="skin-info">
-                <h3 class="skin-name">Daniel <span class="tag gamepass">Gamepass</span></h3>
-                <div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">The Lost Miners: Gamepass Bundle</p></div>
-            </div>
-        </div>
-
+        <div class="skin-card"><div class="img-container"><img src="tomlegacymorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Tom [Legacy] <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Gamepass Pack</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="allisonmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Allison <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Gamepass Pack</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="harveylegacymorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Harvey [Legacy] <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Gamepass Pack</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="danielmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Daniel <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Gamepass Bundle</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="tobymorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Toby <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Gamepass Bundle</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="parkermorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Parker <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Gamepass Bundle</p></div></div></div>
+        
         <div class="section-category">Project Morphs</div>
-
-        <div class="skin-card">
-            <div class="img-container"><img src="coopermorph.png" class="skin-img"></div>
-            <div class="skin-info">
-                <h3 class="skin-name">Cooper <span class="tag badge">Badge</span></h3>
-                <div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Joined Every Piggy Game Belike: Badge</p></div>
-            </div>
-        </div>
+        <div class="skin-card"><div class="img-container"><img src="coopermorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Cooper <span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Badge: Joined Every Piggy Game</p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="thepigmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">The Pig</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">COMING SOON</p></div></div></div>
     </div>
 
     <footer>PIGGY: THE LAST HOUR // 2026</footer>
 </body>
-    </html>
+                                   </html>
