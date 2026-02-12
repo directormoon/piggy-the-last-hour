@@ -12,11 +12,12 @@
             color: #fff; font-family: 'Arial Black', sans-serif; margin: 0; padding: 0; overflow-x: hidden;
         }
         
-        /* HEADER */
+        /* HEADER - ESCALA PADRONIZADA */
         header { 
             width: 100%; padding: 20px 15px; background: rgba(0, 0, 0, 0.9); 
             display: flex; flex-direction: column; align-items: center; gap: 15px; 
         }
+
         .nav-buttons { width: 100%; max-width: 900px; display: flex; justify-content: space-between; align-items: center; }
         .back-btn { 
             color: #ff0000; text-decoration: none; border: 2px solid #ff0000; 
@@ -24,54 +25,85 @@
             background: black;
         }
         .back-btn:hover { background: rgba(255, 0, 0, 0.1); }
+
         .page-title { font-size: 1.5rem; color: #e0e0e0; text-shadow: 2px 2px 4px #000; margin: 0; text-transform: uppercase; }
+
         .divider { width: 100%; height: 4px; background: #ff0000; box-shadow: 0 0 15px #ff0000; }
         
-        /* CATEGORIAS */
+        /* DIVISÓRIAS */
         .section-category { 
             color: #ff0000; font-size: 1rem; text-transform: uppercase; 
             margin: 40px 0 15px 0; display: flex; align-items: center; gap: 15px; 
             grid-column: 1 / -1; width: 100%;
         }
-        .section-category::after { content: ""; flex: 1; height: 2px; background: #440000; }
+        .section-category::after { 
+            content: ""; flex: 1; height: 2px; 
+            background: #440000; 
+        }
 
-        /* GRID */
+        /* GRID: DOIS POR LINHA NO MOBILE E PC */
         .container { 
             width: 100%; max-width: 1000px; margin: 0 auto; padding: 0 10px 40px 10px; 
-            display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 12px;
         }
 
-        /* CARDS PADRÃO (Borda 2px Cinza) */
+        @media (min-width: 768px) {
+            .container { gap: 25px; padding: 0 15px 40px 15px; }
+        }
+
+        /* CARDS DE CAPÍTULO */
         .chapter-card { 
             background: #151515; border: 2px solid #333; border-radius: 10px; 
-            overflow: hidden; position: relative; display: flex; flex-direction: column; width: 100%;
+            overflow: hidden; position: relative; display: flex; flex-direction: column;
+            transition: 0.3s; width: 100%;
         }
 
-        .img-container { width: 100%; aspect-ratio: 16 / 9; background: #000; border-bottom: 2px solid #333; }
+        .img-container { width: 100%; aspect-ratio: 16 / 9; background: #000; position: relative; border-bottom: 2px solid #333; }
         .chapter-img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
+        .mystery-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: repeating-linear-gradient(45deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4) 10px, rgba(20,20,20,0.4) 10px, rgba(20,20,20,0.4) 20px);
+            pointer-events: none;
+        }
+        
         .chapter-info { padding: 10px; flex-grow: 1; display: flex; flex-direction: column; gap: 5px; }
+        @media (min-width: 768px) { .chapter-info { padding: 15px; gap: 8px; } }
+
         .chapter-title { font-size: 0.85rem; color: #ff0000; margin: 0; text-transform: uppercase; }
         @media (min-width: 768px) { .chapter-title { font-size: 1.2rem; } }
         
-        .chapter-desc { font-family: sans-serif; color: #aaa; margin: 0; font-size: 0.7rem; line-height: 1.3; }
-
-        /* TAGS */
+        /* TEXTO LIVRE SEM CAIXA */
+        .chapter-desc { font-family: sans-serif; color: #aaa; margin: 0; font-size: 0.7rem; line-height: 1.3; flex-grow: 1; }
+        @media (min-width: 768px) { .chapter-desc { font-size: 0.85rem; line-height: 1.4; } }
+        
         .difficulty-tag { 
             display: inline-block; color: #fff; padding: 3px 8px; font-size: 0.55rem; 
-            border-radius: 4px; text-transform: uppercase; font-weight: bold; margin-top: 5px;
+            border-radius: 4px; text-transform: uppercase; font-weight: bold; width: fit-content;
+            margin-top: 5px;
         }
+        @media (min-width: 768px) { .difficulty-tag { padding: 5px 12px; font-size: 0.6rem; } }
+
         .easy-bg { background: #28a745; }
         .normal-bg { background: #ffc107; color: #000; }
         .medium-bg { background: #fd7e14; }
         .event-bg { background: #b02e5c; }
-        .mystery-bg { background: #0a0a0a; color: #555; }
-
-        /* BADGES (SOON/ENDED) */
-        .status-tag { 
-            position: absolute; top: 8px; left: 8px; background: #ff0000; color: #fff; 
-            padding: 3px 8px; transform: rotate(-5deg); border: 1px solid #fff; z-index: 5; font-size: 0.6rem;
+        .hard-bg { background: #880000; }
+        .mystery-bg { background: #1a002b; }
+        
+        .status-tag, .soon-tag { 
+            position: absolute; color: #fff; padding: 3px 8px; 
+            transform: rotate(-5deg); border: 1px solid #fff; 
+            top: 8px; left: 8px; z-index: 5; font-size: 0.6rem; font-weight: bold;
         }
+        @media (min-width: 768px) { 
+            .status-tag, .soon-tag { padding: 4px 12px; border: 2px solid #fff; top: 12px; left: 12px; font-size: 0.75rem; }
+        }
+        .status-tag { background: #ff0000; }
+        .soon-tag { background: #00ccff; }
+        .expired { background: #444; color: #aaa; border-color: #666; }
 
         footer { text-align: center; padding: 40px 0; color: #333; font-size: 0.7rem; }
     </style>
@@ -93,11 +125,26 @@
         <div class="section-category">Event Chapters</div>
         
         <div class="chapter-card" style="border-color: #ff69b4;">
-            <div class="img-container"><img src="valentine_chapter.png" class="chapter-img" style="opacity: 0.4;"></div>
+            <div class="img-container">
+                <div class="soon-tag">SOON</div>
+                <img src="valentine_chapter.png" class="chapter-img" style="opacity: 0.4;">
+            </div>
             <div class="chapter-info">
                 <h2 class="chapter-title" style="color: #ff69b4;">A HEARTFELT PERFORMANCE</h2>
                 <p class="chapter-desc">Coming February 14th.</p>
                 <span class="difficulty-tag event-bg">EVENT</span>
+            </div>
+        </div>
+
+        <div class="chapter-card" style="border-color: #00ced1; opacity: 0.8;">
+            <div class="img-container">
+                <div class="status-tag expired">ENDED</div>
+                <img src="winter_event.png" class="chapter-img" style="filter: grayscale(0.5);">
+            </div>
+            <div class="chapter-info">
+                <h2 class="chapter-title" style="color: #00ced1;">THE FROSTBOUND</h2>
+                <p class="chapter-desc">This event has ended.</p>
+                <span class="difficulty-tag" style="background: #4682b4;">EVENT</span>
             </div>
         </div>
 
@@ -107,7 +154,7 @@
             <div class="img-container"><img src="farm_chapter.png" class="chapter-img"></div>
             <div class="chapter-info">
                 <h2 class="chapter-title">CHAPTER 1: FARM</h2>
-                <p class="chapter-desc">You begin your adventure by waking up in a barn...</p>
+                <p class="chapter-desc">You begin your adventure by waking up in a barn. Will you find the cure before your last hour is up?</p>
                 <span class="difficulty-tag easy-bg">Easy</span>
             </div>
         </div>
@@ -116,8 +163,20 @@
             <div class="img-container"><img src="station_chapter.png" class="chapter-img"></div>
             <div class="chapter-info">
                 <h2 class="chapter-title">CHAPTER 2: STATION</h2>
-                <p class="chapter-desc">Traverse the station and find the exit...</p>
+                <p class="chapter-desc">Traverse the station and find the exit, but be careful-you're not alone...</p>
                 <span class="difficulty-tag normal-bg">Normal</span>
+            </div>
+        </div>
+
+        <div class="chapter-card" style="border-style: dashed; border-color: #444; opacity: 0.8;">
+            <div class="img-container">
+                <img src="chapter3_leak.png" class="chapter-img" style="opacity: 0.5;">
+                <div class="mystery-overlay"></div>
+            </div>
+            <div class="chapter-info">
+                <h2 class="chapter-title" style="color: #666;">CHAPTER 3: ???</h2>
+                <p class="chapter-desc">Subject location not yet identified. Investigation pending.</p>
+                <span class="difficulty-tag" style="background: #333;">Unknown</span>
             </div>
         </div>
 
@@ -127,23 +186,21 @@
             <div class="img-container"><img src="circus_chapter.png" class="chapter-img"></div>
             <div class="chapter-info">
                 <h2 class="chapter-title" style="color: #9400d3;">NIGHTMARE CIRCUS</h2>
-                <p class="chapter-desc">What really happened to Clark...</p>
+                <p class="chapter-desc">Dive into Nightmare Circus and find out what really happened to Clark.</p>
                 <span class="difficulty-tag medium-bg">Medium</span>
             </div>
         </div>
 
-        <div class="chapter-card" style="border: 4px solid #000000; background: #050505;">
-            <div class="img-container" style="border-bottom: 4px solid #000000;">
-                <img src="twisted_farm.png" class="chapter-img" style="filter: brightness(0.6);">
-            </div>
+        <div class="chapter-card" style="border-color: #000000;">
+            <div class="img-container"><img src="twisted_farm.png" class="chapter-img"></div>
             <div class="chapter-info">
-                <h2 class="chapter-title" style="color: #ffffff; text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000;">TWISTED FARM</h2>
+                <h2 class="chapter-title" style="color: #9400d3;">TWISTED FARM</h2>
                 <p class="chapter-desc">???</p>
-                <span class="difficulty-tag mystery-bg">????</span>
+                <span class="difficulty-tag mystery-bg">???</span>
             </div>
         </div>
     </div>
 
     <footer>PIGGY: THE LAST HOUR // 2026</footer>
 </body>
-            </html>
+</html>
