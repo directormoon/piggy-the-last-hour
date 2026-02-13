@@ -14,36 +14,55 @@
             margin: 0; padding: 0;
             overflow-x: hidden;
         }
+
+        /* NAVEGAÇÃO UNIFICADA */
+        .top-nav {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            width: 100%;
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            z-index: 1000;
+        }
+
+        .btn-mini {
+            background: rgba(0, 0, 0, 0.8);
+            color: #ff0000;
+            text-decoration: none;
+            font-size: 0.55rem;
+            padding: 6px 10px;
+            border: 1.5px solid #ff0000;
+            border-radius: 4px;
+            transition: 0.3s ease;
+            text-transform: uppercase;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .btn-mini:hover { 
+            background: rgba(255, 0, 0, 0.2); 
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        .right-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 5px;
+            max-width: 300px;
+        }
         
         header { 
             width: 100%; 
-            padding: 20px 15px; 
+            padding: 80px 15px 30px 15px; 
             background: rgba(0, 0, 0, 0.9); 
             display: flex; 
             flex-direction: column; 
             align-items: center; 
             gap: 15px; 
-        }
-
-        .nav-buttons {
-            width: 100%;
-            display: flex;
-            justify-content: flex-start; 
-            align-items: center;
-        }
-        
-        .back-btn { 
-            color: #ff0000; 
-            text-decoration: none; 
-            border: 2px solid #ff0000; 
-            padding: 6px 10px; 
-            border-radius: 5px; 
-            font-size: 0.65rem; 
-            transition: 0.3s;
-        }
-
-        .back-btn:hover {
-            background: rgba(255, 0, 0, 0.1);
         }
         
         .divider { 
@@ -71,7 +90,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            transition: 0.3s ease;
         }
+        .thanks-box:hover { border-color: #ff0000; transform: translateY(-3px); }
         
         .avatar-img {
             width: 85px;
@@ -100,10 +121,17 @@
 </head>
 <body>
 
-<header>
-    <div class="nav-buttons">
-        <a href="credits.html" class="back-btn">CREDITS</a>
+<nav class="top-nav">
+    <a href="credits.html" class="btn-mini">BACK</a>
+    <div class="right-menu">
+        <a href="characters.html" class="btn-mini">Characters</a>
+        <a href="chapters.html" class="btn-mini">Chapters</a>
+        <a href="roleplay.html" class="btn-mini">Roleplay</a>
+        <a href="other-games.html" class="btn-mini">Other Games</a>
     </div>
+</nav>
+
+<header>
     <h1 style="margin:0; font-size: 1.5rem;">SPECIAL THANKS</h1>
 </header>
 <div class="divider"></div>
