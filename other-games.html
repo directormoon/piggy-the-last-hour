@@ -19,7 +19,7 @@
             overflow-x: hidden;
         }
 
-        /* BARRA DE NAVEGAÇÃO SUPERIOR COMPACTA */
+        /* NAVEGAÇÃO UNIFICADA */
         .top-nav {
             position: absolute;
             top: 15px;
@@ -29,7 +29,7 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            z-index: 100;
+            z-index: 1000;
         }
 
         .btn-mini {
@@ -46,8 +46,9 @@
             white-space: nowrap;
         }
         .btn-mini:hover { 
-            background: rgba(255, 0, 0, 0.1); 
+            background: rgba(255, 0, 0, 0.2); 
             transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
         }
 
         .right-menu {
@@ -55,7 +56,7 @@
             flex-wrap: wrap;
             justify-content: flex-end;
             gap: 5px;
-            max-width: 250px;
+            max-width: 300px;
         }
 
         header { padding: 80px 15px 30px 15px; text-align: center; }
@@ -82,7 +83,6 @@
             padding: 0 15px 60px 15px; 
         }
 
-        /* GRID DE JOGOS */
         .games-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -103,7 +103,6 @@
         }
         .game-card:hover { border-color: #ff0000; }
 
-        /* Espaço para a imagem PNG */
         .banner-img {
             width: 100%;
             aspect-ratio: 16 / 9;
@@ -232,4 +231,4 @@
 <footer>PIGGY: THE LAST HOUR // 2026</footer>
 
 </body>
-  </html>
+</html>
