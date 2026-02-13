@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+p<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -59,6 +59,27 @@
             grid-column: 1 / -1; width: 100%;
         }
         .section-category::after { content: ""; flex: 1; height: 2px; background: #440000; }
+
+        /* Sub-categoria para itens dentro de um grupo */
+        .sub-section-category {
+        color: #cc0000; /* Um vermelho um pouco mais escuro/fechado */
+        font-size: 0.85rem; /* Menor que o principal */
+        text-transform: uppercase;
+        margin: 20px 0 10px 0;
+        display: flex;
+        align-items: center; 
+        gap: 10px;
+        grid-column: 1 / -1;
+        width: 100%;
+        opacity: 0.8; /* Dá um aspeto de subtítulo */
+        }
+
+        .sub-section-category::after {
+        content: "";
+        flex: 1;
+        height: 1px; /* Linha mais fina que a de 2px do principal */
+        background: #330000;
+        }
 
         /* TAGS SYSTEM */
         .tag {
@@ -142,9 +163,15 @@
         <div class="skin-card"><div class="img-container"><img src="tomlegacymorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Tom [Legacy] <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Tom (Legacy): Gamepass Pack</p></div></div></div>
         <div class="skin-card"><div class="img-container"><img src="allisonmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Allison <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">The Silent Cop: Gamepass Pack</p></div></div></div>
         <div class="skin-card"><div class="img-container"><img src="harveylegacymorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Harvey [Legacy] <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Harvey (Legacy): Gamepass Pack</p></div></div></div>
-        <div class="skin-card"><div class="img-container"><img src="danielmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Daniel <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">The Lost Miners: Gamepass Bundle</p></div></div></div>
-        <div class="skin-card"><div class="img-container"><img src="tobymorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Toby <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">The Lost Miners: Gamepass Bundle</p></div></div></div>
-        <div class="skin-card"><div class="img-container"><img src="parkermorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Parker <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">The Lost Miners: Gamepass Bundle</p></div></div></div>
+        
+        <div class="sub-section-category">The Lost Miners Bundle</div>
+        <div class="skin-card"><div class="img-container"><img src="danielmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Daniel <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label"></span><p class="skin-how"></p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="tobymorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Toby <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label"></span><p class="skin-how"></p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="parkermorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Parker <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label"></span><p class="skin-how"></p></div></div></div>
+
+        <div class="sub-section-category">2025 Halloween: Gamepass Bundle</div>
+        <div class="skin-card"><div class="img-container"><img src="cammy.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Cammy <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label"></span><p class="skin-how"></p></div></div></div>
+        <div class="skin-card"><div class="img-container"><img src="levi.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Levi <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label"></span><p class="skin-how"></p></div></div></div>
         <div class="skin-card"><div class="img-container"><img src="soldier1.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Soldier 1 <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Armed Soldiers: Gamepass Bundle</p></div></div></div>
         <div class="skin-card"><div class="img-container"><img src="soldier2.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Soldier 2 <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Armed Soldiers: Gamepass Bundle</p></div></div></div>
         <div class="skin-card"><div class="img-container"><img src="soldier3.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Soldier 3 <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Armed Soldiers: Gamepass Bundle</p></div></div></div>
