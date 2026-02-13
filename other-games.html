@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piggy: The Last Hour | Other Games</title>
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: #0a0a0a;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://tr.rbxcdn.com/180DAY-77747666510885/768/432/Image/WebP');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            font-family: 'Arial Black', sans-serif;
+            margin: 0; padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* BARRA DE NAVEGAÇÃO SUPERIOR COMPACTA */
+        .top-nav {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            width: 100%;
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            z-index: 100;
+        }
+
+        .btn-mini {
+            background: rgba(0, 0, 0, 0.8);
+            color: #ff0000;
+            text-decoration: none;
+            font-size: 0.55rem;
+            padding: 6px 10px;
+            border: 1.5px solid #ff0000;
+            border-radius: 4px;
+            transition: 0.3s ease;
+            text-transform: uppercase;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .btn-mini:hover { 
+            background: rgba(255, 0, 0, 0.1); 
+            transform: scale(1.05);
+        }
+
+        .right-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 5px;
+            max-width: 250px;
+        }
+
+        header { padding: 80px 15px 30px 15px; text-align: center; }
+
+        .page-title {
+            font-size: clamp(1.8rem, 8vw, 3rem);
+            margin: 0;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .divider {
+            width: 100%;
+            height: 4px;
+            background: #ff0000;
+            box-shadow: 0 0 15px #ff0000;
+            margin-bottom: 40px;
+        }
+
+        .container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+            padding: 0 15px 60px 15px; 
+        }
+
+        /* GRID DE JOGOS */
+        .games-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        @media (min-width: 768px) { 
+            .games-grid { grid-template-columns: repeat(2, 1fr); } 
+        }
+
+        .game-card {
+            background: rgba(20, 20, 20, 0.9);
+            border: 2px solid #333;
+            border-radius: 12px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s ease;
+        }
+        .game-card:hover { border-color: #ff0000; }
+
+        /* Espaço para a imagem PNG */
+        .banner-img {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background-size: cover;
+            background-position: center;
+            background-color: #000;
+            border-bottom: 1px solid #222;
+        }
+
+        .game-info { padding: 15px; text-align: center; flex-grow: 1; }
+        .game-name { font-size: 0.9rem; color: #fff; margin: 0 0 12px 0; text-transform: uppercase; }
+
+        .play-btn {
+            display: block;
+            background: #ff0000;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 0.75rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s ease;
+            text-transform: uppercase;
+        }
+        .play-btn:hover { background: #b30000; }
+
+        footer { text-align: center; padding: 40px 15px; color: #333; font-size: 0.6rem; border-top: 1px solid #111; }
+    </style>
+</head>
+<body>
+
+<nav class="top-nav">
+    <a href="index.html" class="btn-mini">BACK</a>
+
+    <div class="right-menu">
+        <a href="characters.html" class="btn-mini">Characters</a>
+        <a href="chapters.html" class="btn-mini">Chapters</a>
+        <a href="roleplay.html" class="btn-mini">Roleplay</a>
+    </div>
+</nav>
+
+<header>
+    <h1 class="page-title">Other Games</h1>
+</header>
+
+<div class="divider"></div>
+
+<div class="container">
+    <div class="games-grid">
+        
+        <div class="game-card">
+            <div class="banner-img" style="background-image: url('grimace.png');"></div>
+            <div class="game-info">
+                <h3 class="game-name">The GRIMACE SHAKE</h3>
+                <a href="https://www.roblox.com/games/13997390885/" target="_blank" class="play-btn">Play Game</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="banner-img" style="background-image: url('redhouse.png');"></div>
+            <div class="game-info">
+                <h3 class="game-name">The Red House</h3>
+                <a href="https://www.roblox.com/games/14085775632/" target="_blank" class="play-btn">Play Game</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="banner-img" style="background-image: url('pigzeria.png');"></div>
+            <div class="game-info">
+                <h3 class="game-name">The Pigzeria</h3>
+                <a href="https://www.roblox.com/games/100545584420414/" target="_blank" class="play-btn">Play Game</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="banner-img" style="background-image: url('capitol.png');"></div>
+            <div class="game-info">
+                <h3 class="game-name">Capitol Co</h3>
+                <a href="https://www.roblox.com/games/109927716005742/" target="_blank" class="play-btn">Play Game</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="banner-img" style="background-image: url('finalanswer.png');"></div>
+            <div class="game-info">
+                <h3 class="game-name">The Final Answer</h3>
+                <a href="https://www.roblox.com/games/12907049452/" target="_blank" class="play-btn">Play Game</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="banner-img" style="background-image: url('pigplay.png');"></div>
+            <div class="game-info">
+                <h3 class="game-name">PIGPLAY</h3>
+                <a href="https://www.roblox.com/games/88571811410306/" target="_blank" class="play-btn">Play Game</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="banner-img" style="background-image: url('classic.png');"></div>
+            <div class="game-info">
+                <h3 class="game-name">Sidescrolling Classic</h3>
+                <a href="https://www.roblox.com/games/8586203314/" target="_blank" class="play-btn">Play Game</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="banner-img" style="background-image: url('every.png');"></div>
+            <div class="game-info">
+                <h3 class="game-name">Terror Series</h3>
+                <a href="https://www.roblox.com/games/13229510488/" target="_blank" class="play-btn">Play Game</a>
+            </div>
+        </div>
+
+        <div class="game-card">
+            <div class="banner-img" style="background-image: url('terror.png');"></div>
+            <div class="game-info">
+                <h3 class="game-name">Terror Series</h3>
+                <a href="https://www.roblox.com/games/8488501705/" target="_blank" class="play-btn">Play Game</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>PIGGY: THE LAST HOUR // 2026</footer>
+
+</body>
+  </html>
