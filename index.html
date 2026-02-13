@@ -19,6 +19,19 @@
             overflow-x: hidden;
         }
 
+        /* TIMER STYLE */
+        .timer-container {
+            background: rgba(255, 0, 85, 0.15);
+            border: 2px solid #ff0055;
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(255, 0, 85, 0.3);
+        }
+        .timer-label { color: #ff0055; font-size: 0.7rem; margin: 0 0 5px 0; letter-spacing: 2px; }
+        .timer-display { font-size: 1.6rem; color: #fff; text-shadow: 2px 2px 0 #000; }
+
         /* BOTÃO CREDITS COM ANIMAÇÃO */
         .credits-btn {
             position: absolute;
@@ -77,7 +90,7 @@
             padding: 0 15px 60px 15px; 
         }
 
-        /* EVENT BANNER - ESTÁTICO */
+        /* EVENT BANNER */
         .event-banner {
             background: #151515;
             border: 3px solid #ff69b4;
@@ -122,7 +135,7 @@
             background: #440000; 
         }
 
-        /* MENU GRID - CAIXAS ESTÁTICAS */
+        /* MENU GRID */
         .menu-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -146,7 +159,6 @@
         .menu-card h3 { color: #fff; margin: 0 0 10px 0; font-size: 1.1rem; text-transform: uppercase; }
         .menu-card p { font-family: sans-serif; color: #777; font-size: 0.8rem; margin-bottom: 20px; flex-grow: 1; line-height: 1.4; }
 
-        /* BOTÃO COM ANIMAÇÃO */
         .play-btn {
             display: inline-block;
             background: #ff0000;
@@ -165,7 +177,7 @@
             box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
         }
 
-        /* UPDATE CARDS - ESTÁTICOS */
+        /* UPDATE CARDS */
         .update-card {
             background: rgba(15, 15, 15, 0.9);
             border-left: 4px solid #ff0000;
@@ -199,14 +211,19 @@
 
 <div class="container">
 
+    <div class="timer-container">
+        <p class="timer-label">VALENTINE EVENT STARTS IN:</p>
+        <div id="countdown" class="timer-display">Loading...</div>
+    </div>
+
     <div class="event-banner">
         <div class="img-container-16-9">
-            <div class="soon-overlay">3 DAYS 🚨</div>
+            <div class="soon-overlay">COMING SOON 🚨</div>
             <img src="valentine.png" alt="Valentine" class="img-fluid" style="opacity: 0.5;">
         </div>
         <div style="padding: 18px; text-align: center; background: rgba(255, 105, 180, 0.1);">
             <h2 style="margin: 0; color: #ff69b4; font-size: 1.2rem; text-transform: uppercase;">Valentine's Chapter</h2>
-            <p style="font-family: sans-serif; font-size: 0.8rem; margin: 5px 0 0 0; color: #ff69b4; font-weight: bold;">RELEASING FEBRUARY 14TH</p>
+            <p style="font-family: sans-serif; font-size: 0.8rem; margin: 5px 0 0 0; color: #ff69b4; font-weight: bold;">RELEASING FEBRUARY 14TH @ 18:00</p>
         </div>
     </div>
     
@@ -245,5 +262,30 @@
 </div>
 
 <footer>PIGGY: THE LAST HOUR // 2026</footer>
+
+<script>
+    // Configurado para Amanhã (14 Fev) às 18:00:00
+    var countDownDate = new Date("Feb 14, 2026 18:00:00").getTime();
+
+    var x = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = countDownDate - now;
+
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Exibe apenas Horas, Minutos e Segundos
+      document.getElementById("countdown").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "EVENT LIVE!";
+        document.getElementById("countdown").style.color = "#ff69b4";
+      }
+    }, 1000);
+</script>
+
 </body>
 </html>
