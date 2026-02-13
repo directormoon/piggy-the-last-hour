@@ -19,281 +19,32 @@
             overflow-x: hidden;
         }
 
-        /* TIMER STYLE */
-        .timer-container {
-            background: rgba(255, 0, 85, 0.15);
-            border: 2px solid #ff0055;
-            border-radius: 12px;
-            padding: 15px;
-            margin-bottom: 20px;
-            text-align: center;
-            box-shadow: 0 0 15px rgba(255, 0, 85, 0.3);
-        }
-        .timer-label { color: #ff0055; font-size: 0.7rem; margin: 0 0 5px 0; letter-spacing: 2px; }
-        .timer-display { font-size: 1.6rem; color: #fff; text-shadow: 2px 2px 0 #000; }
-
-        /* BOTÃO CREDITS */
-        .credits-btn {
+        /* NAVEGAÇÃO PADRONIZADA (APENAS CREDITS NO INDEX) */
+        .top-nav {
             position: absolute;
-            top: 20px;
-            right: 20px;
+            top: 15px;
+            right: 15px; /* Alinhado à direita como o original */
+            z-index: 1000;
+        }
+
+        .btn-mini {
             background: rgba(0, 0, 0, 0.8);
             color: #ff0000;
             text-decoration: none;
-            font-size: 0.65rem;
-            padding: 8px 12px;
-            border: 2px solid #ff0000;
-            border-radius: 5px;
-            z-index: 100;
+            font-size: 0.55rem;
+            padding: 6px 12px;
+            border: 1.5px solid #ff0000;
+            border-radius: 4px;
             transition: 0.3s ease;
-            display: inline-block;
-        }
-        .credits-btn:hover { 
-            background: rgba(255, 0, 0, 0.1); 
-            transform: scale(1.1);
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-        }
-
-        header { padding: 60px 15px 40px 15px; text-align: center; width: 100%; }
-
-        .game-title {
-            font-size: clamp(2.2rem, 10vw, 4.5rem);
-            margin: 0;
-            color: #e0e0e0;
-            line-height: 1;
             text-transform: uppercase;
-            text-shadow: -2px -2px 0 #666, 2px -2px 0 #666, -2px 2px 0 #666, 2px 2px 0 #666, 5px 5px 15px #000;
-        }
-
-        .rewinded-subtitle {
-            font-size: clamp(1rem, 5vw, 2rem);
-            color: #ff0000;
-            text-transform: uppercase;
-            margin-top: 15px;
-            display: block;
-            text-shadow: 0 0 10px rgba(255, 0, 0, 0.8), 2px 2px 2px #000;
-            letter-spacing: 3px;
-        }
-
-        .divider {
-            width: 100%;
-            height: 4px;
-            background: #ff0000;
-            box-shadow: 0 0 15px #ff0000;
-            margin-bottom: 40px;
-        }
-
-        .container { 
-            width: 100%;
-            max-width: 900px; 
-            margin: 0 auto; 
-            padding: 0 15px 60px 15px; 
-        }
-
-        /* EVENT BANNER */
-        .event-banner {
-            background: #151515;
-            border: 3px solid #ff69b4;
-            border-radius: 12px;
-            margin-bottom: 50px;
-            overflow: hidden;
-            box-shadow: 0 0 20px rgba(255, 105, 180, 0.2);
-        }
-
-        .img-container-16-9 {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            background: #000;
-            position: relative;
-        }
-
-        .img-fluid { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-        .soon-overlay {
-            position: absolute;
-            background: #00ccff; 
-            color: #fff;
-            padding: 6px 18px;
-            font-size: 0.8rem;
-            transform: rotate(-5deg);
-            border: 2px solid #fff;
-            top: 15px; left: 15px;
-            z-index: 5;
-        }
-
-        .section-title {
-            color: #ff0000;
-            font-size: 1rem;
-            text-transform: uppercase;
-            margin: 40px 0 20px 0;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .section-title::after { 
-            content: ""; flex: 1; height: 2px; 
-            background: #440000; 
-        }
-
-        /* MENU GRID - Atualizado para 4 botões */
-        .menu-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-            margin-bottom: 20px;
-        }
-        @media (min-width: 768px) { 
-            .menu-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; } 
-        }
-
-        .menu-card {
-            background: rgba(20, 20, 20, 0.9);
-            border: 2px solid #333;
-            border-radius: 12px;
-            padding: 25px 20px;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .menu-card h3 { color: #fff; margin: 0 0 10px 0; font-size: 1.1rem; text-transform: uppercase; }
-        .menu-card p { font-family: sans-serif; color: #777; font-size: 0.8rem; margin-bottom: 20px; flex-grow: 1; line-height: 1.4; }
-
-        .play-btn {
             display: inline-block;
-            background: #ff0000;
-            color: #fff;
-            text-decoration: none;
-            padding: 12px;
-            font-size: 0.8rem;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: 0.3s ease;
-            text-transform: uppercase;
         }
-        .play-btn:hover { 
-            background: #b30000; 
+        .btn-mini:hover { 
+            background: rgba(255, 0, 0, 0.2); 
             transform: scale(1.05);
-            box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
         }
 
-        /* UPDATE CARDS */
-        .update-card {
-            background: rgba(15, 15, 15, 0.9);
-            border-left: 4px solid #ff0000;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 0 8px 8px 0;
-        }
-
-        .update-date { color: #555; font-size: 0.65rem; font-family: sans-serif; display: block; margin-bottom: 8px; font-weight: bold; }
-        .update-text { font-family: sans-serif; font-size: 0.9rem; color: #ccc; margin: 0; line-height: 1.5; }
-        
-        .update-img { 
-            width: 100%; max-width: 350px; 
-            height: auto; border-radius: 6px; 
-            border: 1px solid #333; display: block; margin-top: 15px;
-        }
-
-        footer { text-align: center; padding: 60px 15px; color: #333; font-size: 0.7rem; border-top: 1px solid #111; }
-    </style>
-</head>
-<body>
-
-<a href="credits.html" class="credits-btn">CREDITS</a>
-
-<header>
-    <div class="game-title">Piggy<br>The Last Hour</div>
-    <div class="rewinded-subtitle">REWINDED</div>
-</header>
-
-<div class="divider"></div>
-
-<div class="container">
-
-    <div class="timer-container">
-        <p class="timer-label">VALENTINE EVENT STARTS IN:</p>
-        <div id="countdown" class="timer-display">Loading...</div>
-    </div>
-
-    <div class="event-banner">
-        <div class="img-container-16-9">
-            <div class="soon-overlay">COMING SOON 🚨</div>
-            <img src="valentine.png" alt="Valentine" class="img-fluid" style="opacity: 0.5;">
-        </div>
-        <div style="padding: 18px; text-align: center; background: rgba(255, 105, 180, 0.1);">
-            <h2 style="margin: 0; color: #ff69b4; font-size: 1.2rem; text-transform: uppercase;">Valentine's Chapter</h2>
-            <p style="font-family: sans-serif; font-size: 0.8rem; margin: 5px 0 0 0; color: #ff69b4; font-weight: bold;">RELEASING FEBRUARY 14TH </p>
-        </div>
-    </div>
-    
-    <div class="section-title">Explore Content</div>
-    <div class="menu-grid">
-        <div class="menu-card">
-            <h3>Characters</h3>
-            <p>Meet the survivors and the infected.</p>
-            <a href="characters.html" class="play-btn">View Characters</a>
-        </div>
-        <div class="menu-card">
-            <h3>Chapters</h3>
-            <p>Explore all maps from the story.</p>
-            <a href="chapters.html" class="play-btn">Enter Maps</a>
-        </div>
-        <div class="menu-card">
-            <h3>Roleplay</h3>
-            <p>Check out the special morphs.</p>
-            <a href="roleplay.html" class="play-btn">View Skins</a>
-        </div>
-        <div class="menu-card">
-            <h3>Other Games</h3>
-            <p>Discover other projects from our community group.</p>
-            <a href="other-games.html" class="play-btn">Explore More</a>
-        </div>
-    </div>
-
-    <div class="section-title">Latest Updates</div>
-    
-    <div class="update-card">
-        <span class="update-date">FEBRUARY 08, 2026</span>
-        <p class="update-text">Thank you guys for 2K Interested! We cannot express a larger thank you for everyone's support, we're sure this chapter will be extremely fun! 💖</p>
-        <img src="update.png" class="update-img" alt="Update">
-    </div>
-
-    <div class="update-card">
-        <span class="update-date">FEBRUARY 07, 2026</span>
-        <p class="update-text">Hello everyone! We’re excited to announce the 6 Years of Piggy code will be ending on 14th Feb! (Valentines Day) when the chapter releases.</p>
-    </div>
-
-</div>
-
-<footer>PIGGY: THE LAST HOUR // 2026</footer>
-
-<script>
-    var countDownDate = new Date("Feb 14, 2026 18:00:00").getTime();
-
-    var x = setInterval(function() {
-      var now = new Date().getTime();
-      var distance = countDownDate - now;
-
-      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      if (days > 0) {
-        document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-      } else {
-        document.getElementById("countdown").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
-      }
-
-      if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("countdown").innerHTML = "EVENT LIVE!";
-        document.getElementById("countdown").style.color = "#ff69b4";
-        document.getElementById("countdown").style.fontWeight = "bold";
-      }
-    }, 1000);
-</script>
-
-</body>
-</html>
+        /* TIMER STYLE */
+        .timer-container {
