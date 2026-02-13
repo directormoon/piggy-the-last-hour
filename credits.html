@@ -14,11 +14,51 @@
             margin: 0; padding: 0;
             overflow-x: hidden;
         }
+
+        /* NAVEGAÇÃO UNIFICADA */
+        .top-nav {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            width: 100%;
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            z-index: 1000;
+        }
+
+        .btn-mini {
+            background: rgba(0, 0, 0, 0.8);
+            color: #ff0000;
+            text-decoration: none;
+            font-size: 0.55rem;
+            padding: 6px 10px;
+            border: 1.5px solid #ff0000;
+            border-radius: 4px;
+            transition: 0.3s ease;
+            text-transform: uppercase;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .btn-mini:hover { 
+            background: rgba(255, 0, 0, 0.2); 
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        .right-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 5px;
+            max-width: 300px;
+        }
         
-        /* Header ajustado para dois botões */
+        /* Header ajustado para a nova nav */
         header { 
             width: 100%; 
-            padding: 20px 15px; 
+            padding: 80px 15px 30px 15px; 
             background: rgba(0, 0, 0, 0.9); 
             display: flex; 
             flex-direction: column; 
@@ -26,26 +66,17 @@
             gap: 15px; 
         }
 
-        .nav-buttons {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .back-btn { 
-            color: #ff0000; 
-            text-decoration: none; 
-            border: 2px solid #ff0000; 
-            padding: 6px 10px; 
-            border-radius: 5px; 
-            font-size: 0.65rem; /* Reduzi ligeiramente para caberem os dois no telemóvel */
+        .special-thanks-btn {
+            background: #ff0000;
+            color: #fff;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.7rem;
+            margin-bottom: 10px;
             transition: 0.3s;
         }
-
-        .back-btn:hover {
-            background: rgba(255, 0, 0, 0.1);
-        }
+        .special-thanks-btn:hover { background: #b30000; transform: scale(1.05); }
         
         .divider { 
             width: 100%; 
@@ -72,7 +103,9 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            transition: 0.3s ease;
         }
+        .credit-box:hover { border-color: #ff0000; }
         
         .avatar-img {
             width: 100px;
@@ -104,9 +137,7 @@
             transition: opacity 0.2s;
         }
         
-        .credit-link:hover {
-            opacity: 0.8;
-        }
+        .credit-link:hover { opacity: 0.8; }
         
         .sub-text { 
             font-family: sans-serif; 
@@ -118,11 +149,13 @@
 </head>
 <body>
 
+<nav class="top-nav">
+    <a href="index.html" class="btn-mini">BACK</a>
+    <div class="right-menu"></div>
+</nav>
+
 <header>
-    <div class="nav-buttons">
-        <a href="index.html" class="back-btn">⬅ BACK TO MENU</a>
-        <a href="special-thanks.html" class="back-btn">SPECIAL THANKS ➜</a>
-    </div>
+    <a href="special-thanks.html" class="special-thanks-btn">SPECIAL THANKS ➜</a>
     <h1 style="margin:0; font-size: 1.5rem;">CREDITS</h1>
 </header>
 <div class="divider"></div>
