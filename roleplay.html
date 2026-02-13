@@ -12,26 +12,57 @@
             color: #fff; font-family: 'Arial Black', sans-serif; margin: 0; padding: 0; overflow-x: hidden;
         }
 
+        /* NAVEGAÇÃO UNIFICADA */
+        .top-nav {
+            position: absolute;
+            top: 15px;
+            left: 0;
+            width: 100%;
+            padding: 0 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            z-index: 1000;
+        }
+
+        .btn-mini {
+            background: rgba(0, 0, 0, 0.8);
+            color: #ff0000;
+            text-decoration: none;
+            font-size: 0.55rem;
+            padding: 6px 10px;
+            border: 1.5px solid #ff0000;
+            border-radius: 4px;
+            transition: 0.3s ease;
+            text-transform: uppercase;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .btn-mini:hover { 
+            background: rgba(255, 0, 0, 0.2); 
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+        }
+
+        .right-menu {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 5px;
+            max-width: 300px;
+        }
+
         header { 
-            width: 100%; padding: 20px 15px; 
+            width: 100%; 
+            padding: 80px 15px 30px 15px; /* Ajustado para dar espaço à nav */
             background: rgba(0, 0, 0, 0.9); 
-            display: flex; flex-direction: column; align-items: center; gap: 15px; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            gap: 15px; 
         }
 
-        .nav-buttons { width: 100%; max-width: 1100px; display: flex; justify-content: space-between; align-items: center; }
-        
-        .back-btn { 
-            color: #ff0000; text-decoration: none; border: 2px solid #ff0000; 
-            padding: 6px 10px; border-radius: 5px; font-size: 0.65rem; transition: 0.3s ease;
-            background: black;
-            display: inline-block;
-        }
-        .back-btn:hover { 
-            background: rgba(255, 0, 0, 0.1); 
-            transform: scale(1.1);
-            box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
-        }
-
+        /* Estilos originais da página */
         .page-title { font-size: 1.5rem; color: #e0e0e0; text-shadow: 2px 2px 4px #000; margin: 0; text-transform: uppercase; }
         .divider { width: 100%; height: 4px; background: #ff0000; box-shadow: 0 0 15px #ff0000; }
         
@@ -60,38 +91,18 @@
         }
         .section-category::after { content: ""; flex: 1; height: 2px; background: #440000; }
 
-        /* Sub-categoria para itens dentro de um grupo */
         .sub-section-category {
-        color: #cc0000; /* Um vermelho um pouco mais escuro/fechado */
-        font-size: 0.85rem; /* Menor que o principal */
-        text-transform: uppercase;
-        margin: 20px 0 10px 0;
-        display: flex;
-        align-items: center; 
-        gap: 10px;
-        grid-column: 1 / -1;
-        width: 100%;
-        opacity: 0.8; /* Dá um aspeto de subtítulo */
+            color: #cc0000; font-size: 0.85rem; text-transform: uppercase;
+            margin: 20px 0 10px 0; display: flex; align-items: center; 
+            gap: 10px; grid-column: 1 / -1; width: 100%; opacity: 0.8;
         }
-
-        .sub-section-category::after {
-        content: "";
-        flex: 1;
-        height: 1px; /* Linha mais fina que a de 2px do principal */
-        background: #330000;
-        }
+        .sub-section-category::after { content: ""; flex: 1; height: 1px; background: #330000; }
 
         /* TAGS SYSTEM */
         .tag {
-            display: inline-block;
-            color: #000;
-            padding: 2px 6px;
-            font-size: 0.5rem;
-            border-radius: 3px;
-            text-transform: uppercase;
-            font-weight: bold;
-            vertical-align: middle;
-            margin-left: 5px;
+            display: inline-block; color: #000; padding: 2px 6px; font-size: 0.5rem;
+            border-radius: 3px; text-transform: uppercase; font-weight: bold;
+            vertical-align: middle; margin-left: 5px;
         }
         .badge { background: #00ccff; }
         .code { background: #00ff7f; }
@@ -117,18 +128,19 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="nav-buttons">
-            <a href="index.html" class="back-btn">⬅ MENU</a>
-            <div style="display: flex; gap: 8px;">
-                <a href="chapters.html" class="back-btn">CHAPTERS ➜</a>
-                <a href="characters.html" class="back-btn">CHARACTERS ➜</a>
-            </div>
+    <nav class="top-nav">
+        <a href="index.html" class="btn-mini">BACK</a>
+        <div class="right-menu">
+            <a href="characters.html" class="btn-mini">Characters</a>
+            <a href="chapters.html" class="btn-mini">Chapters</a>
+            <a href="other-games.html" class="btn-mini">Other Games</a>
         </div>
+    </nav>
+
+    <header>
         <h1 class="page-title">ROLEPLAY SKINS</h1>
     </header>
-    <div class="divider"></div>
-
+    <div class="divider"></div> 
     <div class="container">
         <div class="section-category">Main Morphs</div>
         <div class="skin-card"><div class="img-container"><img src="clarkmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Clark</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div></div></div>
