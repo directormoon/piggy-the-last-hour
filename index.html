@@ -32,7 +32,7 @@
         .timer-label { color: #ff0055; font-size: 0.7rem; margin: 0 0 5px 0; letter-spacing: 2px; }
         .timer-display { font-size: 1.6rem; color: #fff; text-shadow: 2px 2px 0 #000; }
 
-        /* BOTÃO CREDITS COM ANIMAÇÃO */
+        /* BOTÃO CREDITS */
         .credits-btn {
             position: absolute;
             top: 20px;
@@ -135,7 +135,7 @@
             background: #440000; 
         }
 
-        /* MENU GRID */
+        /* MENU GRID - Atualizado para 4 botões */
         .menu-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -143,7 +143,7 @@
             margin-bottom: 20px;
         }
         @media (min-width: 768px) { 
-            .menu-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; } 
+            .menu-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; } 
         }
 
         .menu-card {
@@ -231,18 +231,23 @@
     <div class="menu-grid">
         <div class="menu-card">
             <h3>Characters</h3>
-            <p>Meet the survivors and the infected lurking in the dark.</p>
+            <p>Meet the survivors and the infected.</p>
             <a href="characters.html" class="play-btn">View Characters</a>
         </div>
         <div class="menu-card">
             <h3>Chapters</h3>
-            <p>Explore all maps from the Farm to the Station.</p>
+            <p>Explore all maps from the story.</p>
             <a href="chapters.html" class="play-btn">Enter Maps</a>
         </div>
         <div class="menu-card">
             <h3>Roleplay</h3>
-            <p>Check out the special morphs and roleplay skins.</p>
+            <p>Check out the special morphs.</p>
             <a href="roleplay.html" class="play-btn">View Skins</a>
+        </div>
+        <div class="menu-card">
+            <h3>Other Games</h3>
+            <p>Discover other projects from our community group.</p>
+            <a href="other-games.html" class="play-btn">Explore More</a>
         </div>
     </div>
 
@@ -264,27 +269,23 @@
 <footer>PIGGY: THE LAST HOUR // 2026</footer>
 
 <script>
-    // Configurado corretamente para AMANHÃ, DIA 14, às 18:00
     var countDownDate = new Date("Feb 14, 2026 18:00:00").getTime();
 
     var x = setInterval(function() {
       var now = new Date().getTime();
       var distance = countDownDate - now;
 
-      // Cálculo de dias, horas, minutos e segundos
       var days = Math.floor(distance / (1000 * 60 * 60 * 24));
       var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      // Se ainda faltar mais de um dia, mostra os dias também
       if (days > 0) {
         document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
       } else {
         document.getElementById("countdown").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
       }
 
-      // Quando chegar às 18h de amanhã
       if (distance < 0) {
         clearInterval(x);
         document.getElementById("countdown").innerHTML = "EVENT LIVE!";
