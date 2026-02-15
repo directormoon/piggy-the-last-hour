@@ -54,7 +54,7 @@
 
         header { 
             width: 100%; 
-            padding: 80px 15px 30px 15px; /* Ajustado para dar espaço à nav */
+            padding: 100px 25px 30px 25px; /* Ajustado para dar espaço à nav */
             background: rgba(0, 0, 0, 0.9); 
             display: flex; 
             flex-direction: column; 
@@ -67,37 +67,54 @@
         .divider { width: 100%; height: 4px; background: #ff0000; box-shadow: 0 0 15px #ff0000; }
         
         .container { 
-            width: 100%; max-width: 1200px; 
-            margin: 0 auto; padding: 0 5px 40px 5px; 
+            width: 100%; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 15px 40px 15px; /* 15px de margem nas laterais no mobile */
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* FORÇA 3 COLUNAS NO MOBILE */
-            gap: 8px;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 12px; /* Espaço entre os cards */
             justify-items: center;
         }
 
         @media (min-width: 768px) {
             .container { 
-                grid-template-columns: repeat(4, 1fr); /* MANTÉM 4 NO PC */
+                grid-template-columns: repeat(4, 1fr); 
                 gap: 20px;
-                padding: 0 15px 40px 15px;
+                padding: 0 20px 40px 20px; /* Mais respiro no PC */
                 justify-items: stretch;
             }
         }
 
         .section-category { 
-            color: #ff0000; font-size: 1rem; text-transform: uppercase; 
-            margin: 40px 0 15px 0; display: flex; align-items: center; gap: 15px; 
-            grid-column: 1 / -1; width: 100%;
+            color: #ff0000; 
+            font-size: 1rem; 
+            text-transform: uppercase; 
+            margin: 40px 0 15px 0; 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+            grid-column: 1 / -1; 
+            width: 100%;
+            padding: 0 10px; /* Alinha o texto com a borda dos cards */
         }
         .section-category::after { content: ""; flex: 1; height: 2px; background: #440000; }
 
         .sub-section-category {
-            color: #cc0000; font-size: 0.85rem; text-transform: uppercase;
-            margin: 20px 0 10px 0; display: flex; align-items: center; 
-            gap: 10px; grid-column: 1 / -1; width: 100%; opacity: 0.8;
+            color: #cc0000; 
+            font-size: 0.85rem; 
+            text-transform: uppercase;
+            margin: 20px 0 10px 0; 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+            grid-column: 1 / -1; 
+            width: 100%; 
+            opacity: 0.8;
+            padding: 0 10px; /* Mantém a consistência visual */
         }
         .sub-section-category::after { content: ""; flex: 1; height: 1px; background: #330000; }
-
+        
         /* TAGS SYSTEM */
         .tag {
             display: inline-block; color: #000; padding: 2px 6px; font-size: 0.5rem;
@@ -152,13 +169,13 @@
     </header>
     <div class="divider"></div> 
     <div class="container">
-        <div class="section-category">Main Morphs</div>
+        <div class="container"><div class="section-category">Main Morphs</div>
         <div class="skin-card"><div class="img-container"><img src="clarkmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Clark</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div></div></div>
         <div class="skin-card"><div class="img-container"><img src="cindymorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Cindy</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div></div></div>
         <div class="skin-card"><div class="img-container"><img src="pippinmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Pippin</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div></div></div>
         <div class="skin-card"><div class="img-container"><img src="billmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Bill</h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">FREE</p></div></div></div>
 
-        <div class="section-category">Extra Morphs</div>
+        <div class="container"><div class="section-category">Extra Morphs</div>
         <div class="skin-card"><div class="img-container"><img src="cindyfallenmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Cindy [Fallen] <span class="tag chapter">Chapter</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Completed Farm</p></div></div></div>
         <div class="skin-card"><div class="img-container"><img src="error.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">NOTMEANTOEXIST.EXE <span class="tag secret">Secret</span><span class="tag chapter">Chapter</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Completed Twisted Farm</p></div></div></div>
         <div class="skin-card"><div class="img-container"><img src="cindycookiemorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Cindy [Cookie] <span class="tag winter">Christmas</span><span class="tag collab">Collab</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Completed Cookie Cutter</p></div></div></div>
@@ -196,7 +213,7 @@
         <div class="skin-card"><div class="img-container"><img src="tom.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Tom <span class="tag valentine">Valentine</span><span class="tag chapter">Chapter</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Completed a Heartfelt Performance</p></div></div></div>
         <div class="skin-card"><div class="img-container"><img src="tasha.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Tasha <span class="tag valentine">Valentine</span><span class="tag chapter">Chapter</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Completed a Heartfelt Performance</p></div></div></div>
 
-        <div class="section-category">Gamepass Morphs</div>
+        <div class="container"><div class="section-category">Gamepass Morphs</div>
         <div class="skin-card"><div class="img-container"><img src="tomlegacymorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Tom [Legacy] <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Tom (Legacy): Gamepass Pack</p></div></div></div>
         <div class="skin-card"><div class="img-container"><img src="allisonmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Allison <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">The Silent Cop: Gamepass Pack</p></div></div></div>
         <div class="skin-card"><div class="img-container"><img src="harveylegacymorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Harvey [Legacy] <span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Harvey (Legacy): Gamepass Pack</p></div></div></div>
@@ -239,7 +256,7 @@
         <div class="skin-card"><div class="img-container"><img src="reindeer1.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Reindeer 1 <span class="tag winter">Christmas</span><span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label"></span><p class="skin-how"></p></div></div></div>
         <div class="skin-card"><div class="img-container"><img src="reindeer2.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Reindeer 2 <span class="tag winter">Christmas</span><span class="tag gamepass">Gamepass</span></h3><div class="how-to-box"><span class="how-label"></span><p class="skin-how"></p></div></div></div>
         
-        <div class="section-category">Project Morphs</div>
+        <div class="container"><div class="section-category">Project Morphs</div>
         <div class="skin-card"><div class="img-container"><img src="coopermorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">Cooper <span class="tag project">Project</span><span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">Joined Every Piggy Game Belike: Badge</p></div></div></div>
         <div class="skin-card"><div class="img-container"><img src="thepigmorph.png" class="skin-img"></div><div class="skin-info"><h3 class="skin-name">The Pig <span class="tag project">Project</span><span class="tag badge">Badge</span></h3><div class="how-to-box"><span class="how-label">Cost:</span><p class="skin-how">The Horror: Badge</p></div></div></div>
     </div>
