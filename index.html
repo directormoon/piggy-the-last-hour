@@ -59,7 +59,7 @@
         .timer-label { color: #ff0055; font-size: 0.7rem; margin: 0 0 5px 0; letter-spacing: 2px; }
         .timer-display { font-size: 1.6rem; color: #fff; text-shadow: 2px 2px 0 #000; }
 
-        /* HEADER ATUALIZADO COM LOGO */
+        /* HEADER COM LOGO CORRIGIDA */
         header { 
             padding: 60px 15px 30px 15px; 
             text-align: center; 
@@ -75,17 +75,13 @@
             width: 100%;
             height: auto;
             display: block;
-            filter: drop-shadow(0 0 12px rgba(255, 0, 0, 0.5));
+            filter: none; /* Brilho removido para esconder o retângulo da foto */
+            margin-top: -5px; /* Subida de 5 píxeis conforme pedido */
             transition: transform 0.3s ease;
         }
 
         .main-logo:hover {
             transform: scale(1.03);
-        }
-
-        @media (max-width: 768px) {
-            .logo-container { max-width: 90%; }
-            header { padding-top: 100px; }
         }
 
         .divider {
@@ -106,6 +102,11 @@
 
         .img-container-16-9 { width: 100%; aspect-ratio: 16 / 9; background: #000; position: relative; }
         .img-fluid { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .soon-overlay {
+            position: absolute; background: #00ccff; color: #fff;
+            padding: 6px 18px; font-size: 0.8rem; transform: rotate(-5deg);
+            border: 2px solid #fff; top: 15px; left: 15px; z-index: 5;
+        }
 
         .section-title {
             color: #ff0000; font-size: 1rem; text-transform: uppercase;
@@ -140,6 +141,11 @@
         .update-img { width: 100%; max-width: 350px; height: auto; border-radius: 6px; border: 1px solid #333; display: block; margin-top: 15px; }
 
         footer { text-align: center; padding: 60px 15px; color: #333; font-size: 0.7rem; border-top: 1px solid #111; }
+
+        @media (max-width: 768px) {
+            .logo-container { max-width: 90%; }
+            header { padding-top: 100px; }
+        }
     </style>
 </head>
 <body>
@@ -164,7 +170,7 @@
 
         <div class="event-banner">
             <div class="img-container-16-9">
-                <img src="valentine_chapter (1).jpg" alt="Valentine" class="img-fluid">
+                <img src="valentine.png" alt="Valentine" class="img-fluid">
             </div>
             <div style="padding: 18px; text-align: center; background: rgba(255, 105, 180, 0.1);">
                 <h2 style="margin: 0; color: #ff69b4; font-size: 1.2rem; text-transform: uppercase;">A HEARTFELT PERFORMANCE</h2>
@@ -199,29 +205,37 @@
         <div class="section-title">Latest Updates</div>
         <div class="update-card">
             <span class="update-date">FEBRUARY 08, 2026</span>
-            <p class="update-text">Thank you guys for 2K Interested! We cannot express a larger thank you for everyone's support! 💖</p>
+            <p class="update-text">Thank you guys for 2K Interested! We cannot express a larger thank you for everyone's support, we're sure this chapter will be extremely fun! 💖</p>
+            <img src="update.png" class="update-img" alt="Update">
+        </div>
+        <div class="update-card">
+            <span class="update-date">FEBRUARY 07, 2026</span>
+            <p class="update-text">Hello everyone! We’re excited to announce the 6 Years of Piggy code will be ending on 14th Feb! (Valentines Day) when the chapter releases.</p>
         </div>
     </div>
 
     <footer>PIGGY: THE LAST HOUR // 2026</footer>
 
     <script>
-        // Mantive o teu script original do timer por segurança
         var countDownDate = new Date("Feb 14, 2026 18:00:00").getTime();
         var x = setInterval(function() {
           var now = new Date().getTime();
           var distance = countDownDate - now;
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+          if (days > 0) {
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+          } else {
+            document.getElementById("countdown").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
+          }
           if (distance < 0) {
             clearInterval(x);
             document.getElementById("countdown").innerHTML = "LIVE!";
             document.getElementById("countdown").style.color = "#ff69b4";
-          } else {
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            document.getElementById("countdown").innerHTML = hours + "h " + minutes + "m " + seconds + "s ";
           }
         }, 1000);
     </script>
 </body>
-</html>
+                </html>
