@@ -46,7 +46,7 @@
             box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
         }
 
-        /* TIMER STYLE - AGORA ESTÁTICO PARA O EVENTO LIVE */
+        /* TIMER STYLE - ESTÁTICO */
         .timer-container {
             background: rgba(255, 0, 85, 0.15);
             border: 2px solid #ff0055;
@@ -59,9 +59,9 @@
         .timer-label { color: #ff0055; font-size: 0.7rem; margin: 0 0 5px 0; letter-spacing: 2px; }
         .timer-display { font-size: 1.6rem; color: #ff69b4; text-shadow: 0 0 10px rgba(255, 105, 180, 0.5); }
 
-        /* HEADER AJUSTADO - MAIS ALTO E SEM ANIMAÇÃO */
+        /* HEADER E LOGO - AJUSTE PARA NÃO CORTAR */
         header { 
-            padding: 20px 15px 10px 15px;
+            padding: 0; /* Remove padding para ganhar espaço */
             text-align: center; 
             width: 100%; 
         }
@@ -69,6 +69,7 @@
         .logo-container {
             max-width: 600px;
             margin: 0 auto;
+            overflow: visible;
         }
 
         .main-logo {
@@ -76,7 +77,8 @@
             height: auto;
             display: block;
             filter: none; 
-            margin-top: -5px;
+            /* Ajuste para PC: Sobe o máximo sem cortar o topo da imagem */
+            margin-top: -50px; 
         }
 
         .divider {
@@ -132,10 +134,13 @@
 
         footer { text-align: center; padding: 60px 15px; color: #333; font-size: 0.7rem; border-top: 1px solid #111; }
 
+        /* AJUSTES ESPECÍFICOS PARA MOBILE */
         @media (max-width: 768px) {
-            .logo-container { max-width: 90%; }
-            .main-logo { margin-top: -10px; }
-            header { padding-top: 80px; }
+            .logo-container { max-width: 85%; }
+            .main-logo { 
+                margin-top: -20px; /* No mobile a imagem é menor, então o margin negativo tem de ser menor para não cortar */
+            }
+            header { padding-top: 70px; } /* Abre espaço para o botão de créditos no mobile */
         }
     </style>
 </head>
