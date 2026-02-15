@@ -80,12 +80,19 @@
         }
 
         /* DIVISÓRIAS */
-        .chapter-section-title { 
+        .chapters-section-title { 
             color: #ff0000; font-size: 1rem; text-transform: uppercase; 
             margin: 40px 0 15px 0; display: flex; align-items: center; gap: 15px; 
             grid-column: 1 / -1; width: 100%;
         }
-        .chapter-section-title::after { content: ""; flex: 1; height: 2px; background: #440000; }
+        .chapters-section::after { content: ""; flex: 1; height: 2px; background: #440000; }
+
+        .chapter-section {
+            color: #cc0000; font-size: 0.85rem; text-transform: uppercase;
+            margin: 20px 0 10px 0; display: flex; align-items: center; 
+            gap: 10px; grid-column: 1 / -1; width: 100%; opacity: 0.8;
+        }
+        .chapter-section::after { content: ""; flex: 1; height: 1px; background: #330000; }
 
         /* CARDS */
         .char-card { 
@@ -137,8 +144,10 @@
     </header>
     <div class="divider"></div>
 
+    <div class="chapters-section">Main Game</div>
+    
     <div class="container">
-        <div class="chapter-section-title">Chapter 1: Farm</div>
+        <div class="chapter-section">Chapter 1: Farm</div>
         
         <div class="char-card">
             <div class="img-container"><img src="cindy.png" class="char-img"></div>
@@ -158,7 +167,7 @@
             </div>
         </div>
 
-        <div class="chapter-section-title">Chapter 2: Station</div>
+        <div class="chapter-section">Chapter 2: Station</div>
         
         <div class="char-card">
             <div class="img-container"><img src="bill.png" class="char-img"></div>
@@ -187,7 +196,7 @@
             </div>
         </div>
 
-        <div class="chapter-section-title">Chapter 3: ???</div>
+        <div class="chapter-section">Chapter 3: ???</div>
         
         <div class="char-card" style="border-style: dashed; opacity: 0.5;">
             <div class="img-container" style="background: repeating-linear-gradient(45deg, #000, #000 10px, #0a0a0a 10px, #0a0a0a 20px);"></div>
