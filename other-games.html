@@ -88,11 +88,15 @@
 
         .games-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr); /* FORÇA 2 COLUNAS NO MOBILE */
+            gap: 12px; /* Espaço ligeiramente menor para caberem dois */
         }
+
         @media (min-width: 768px) { 
-            .games-grid { grid-template-columns: repeat(2, 1fr); } 
+            .games-grid { 
+                grid-template-columns: repeat(3, 1fr); /* 3 OU 4 COLUNAS NO PC */
+                gap: 20px; 
+            } 
         }
 
         .game-card {
