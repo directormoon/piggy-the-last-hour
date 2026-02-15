@@ -19,7 +19,7 @@
             overflow-x: hidden;
         }
 
-        /* NAVEGAÇÃO PADRONIZADA */
+        /* NAVEGAÇÃO */
         .top-nav {
             position: absolute;
             top: 15px;
@@ -46,7 +46,7 @@
             box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
         }
 
-        /* TIMER STYLE - ESTÁTICO */
+        /* TIMER STYLE */
         .timer-container {
             background: rgba(255, 0, 85, 0.15);
             border: 2px solid #ff0055;
@@ -57,11 +57,11 @@
             box-shadow: 0 0 15px rgba(255, 0, 85, 0.3);
         }
         .timer-label { color: #ff0055; font-size: 0.7rem; margin: 0 0 5px 0; letter-spacing: 2px; }
-        .timer-display { font-size: 1.6rem; color: #ff69b4; text-shadow: 0 0 10px rgba(255, 105, 180, 0.5); }
+        .timer-display { font-size: 1.6rem; color: #fff; text-shadow: 2px 2px 0 #000; }
 
-        /* HEADER E LOGO - AJUSTE PARA NÃO CORTAR */
+        /* HEADER COM LOGO AJUSTADA */
         header { 
-            padding: 0; /* Remove padding para ganhar espaço */
+            padding: 60px 15px 30px 15px; 
             text-align: center; 
             width: 100%; 
         }
@@ -69,16 +69,24 @@
         .logo-container {
             max-width: 600px;
             margin: 0 auto;
-            overflow: visible;
         }
 
         .main-logo {
             width: 100%;
             height: auto;
             display: block;
-            filter: none; 
-            /* Ajuste para PC: Sobe o máximo sem cortar o topo da imagem */
-            margin-top: -5px; 
+            filter: none; /* Brilho removido para esconder o retângulo */
+            margin-top: -5px; /* Subida de 5 píxeis conforme pedido */
+            transition: transform 0.3s ease;
+        }
+
+        .main-logo:hover {
+            transform: scale(1.03);
+        }
+
+        @media (max-width: 768px) {
+            .logo-container { max-width: 90%; }
+            header { padding-top: 100px; }
         }
 
         .divider {
@@ -91,6 +99,7 @@
             margin: 0 auto; padding: 0 15px 60px 15px; 
         }
 
+        /* EVENT BANNER */
         .event-banner {
             background: #151515; border: 3px solid #ff69b4;
             border-radius: 12px; margin-bottom: 50px; overflow: hidden;
@@ -130,18 +139,8 @@
         }
         .update-date { color: #555; font-size: 0.65rem; font-family: sans-serif; display: block; margin-bottom: 8px; font-weight: bold; }
         .update-text { font-family: sans-serif; font-size: 0.9rem; color: #ccc; margin: 0; line-height: 1.5; }
-        .update-img { width: 100%; max-width: 350px; height: auto; border-radius: 6px; border: 1px solid #333; display: block; margin-top: 15px; }
 
         footer { text-align: center; padding: 60px 15px; color: #333; font-size: 0.7rem; border-top: 1px solid #111; }
-
-        /* AJUSTES ESPECÍFICOS PARA MOBILE */
-        @media (max-width: 768px) {
-            .logo-container { max-width: 85%; }
-            .main-logo { 
-                margin-top: -20px; /* No mobile a imagem é menor, então o margin negativo tem de ser menor para não cortar */
-            }
-            header { padding-top: 70px; } /* Abre espaço para o botão de créditos no mobile */
-        }
     </style>
 </head>
 <body>
@@ -152,7 +151,7 @@
 
     <header>
         <div class="logo-container">
-            <img src="logo.png" alt="Piggy: The Last Hour Rewinded" class="main-logo">
+            <img src="logo (1).jpg" alt="Piggy: The Last Hour Rewinded" class="main-logo">
         </div>
     </header>
 
@@ -161,12 +160,12 @@
     <div class="container">
         <div class="timer-container">
             <p class="timer-label">VALENTINE EVENT IS:</p>
-            <div class="timer-display">LIVE!</div>
+            <div class="timer-display" style="color: #ff69b4;">LIVE!</div>
         </div>
 
         <div class="event-banner">
             <div class="img-container-16-9">
-                <img src="valentine.png" alt="Valentine" class="img-fluid">
+                <img src="valentine_chapter (1).jpg" alt="Valentine" class="img-fluid">
             </div>
             <div style="padding: 18px; text-align: center; background: rgba(255, 105, 180, 0.1);">
                 <h2 style="margin: 0; color: #ff69b4; font-size: 1.2rem; text-transform: uppercase;">A HEARTFELT PERFORMANCE</h2>
@@ -201,12 +200,7 @@
         <div class="section-title">Latest Updates</div>
         <div class="update-card">
             <span class="update-date">FEBRUARY 08, 2026</span>
-            <p class="update-text">Thank you guys for 2K Interested! We cannot express a larger thank you for everyone's support, we're sure this chapter will be extremely fun! 💖</p>
-            <img src="update.png" class="update-img" alt="Update">
-        </div>
-        <div class="update-card">
-            <span class="update-date">FEBRUARY 07, 2026</span>
-            <p class="update-text">Hello everyone! We’re excited to announce the 6 Years of Piggy code will be ending on 14th Feb! (Valentines Day) when the chapter releases.</p>
+            <p class="update-text">Thank you guys for 2K Interested! We cannot express a larger thank you for everyone's support! 💖</p>
         </div>
     </div>
 
