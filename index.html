@@ -83,9 +83,12 @@
             width: 100%; 
             height: 4px; 
             background: #ff0000;
-            /* Removi o box-shadow para tirar o brilho que revelava o quadrado */
-            box-shadow: none; 
-            margin-top: 40px; 
+            /* O brilho desce sempre com a linha */
+            box-shadow: 0 0 15px #ff0000; 
+    
+            /* Aumenta este valor se ainda vires o quadrado. 
+            80px deve ser suficiente para o brilho não tocar na logo. */
+            margin-top: 80px; 
             margin-bottom: 40px;
         }
         
